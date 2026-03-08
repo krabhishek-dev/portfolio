@@ -602,7 +602,7 @@ const Home = () => {
           >
             <div className="image-wrapper">
               <div className="glow-effect"></div>
-              <img src="/portfolio/images/my_image2.jpg" alt="Abhishek Kumar" />
+              <img src="/portfolio/images/my_image2.png" alt="Abhishek Kumar" />
             </div>
           </motion.div>
         </div>
