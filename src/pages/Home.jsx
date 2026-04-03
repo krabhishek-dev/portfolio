@@ -602,7 +602,7 @@ const Home = () => {
           >
             <div className="image-wrapper">
               <div className="glow-effect"></div>
-              <img src="/portfolio/images/my_image2.png" alt="Abhishek Kumar" />
+              <img src="/portfolio/images/main_image.jpeg" alt="Abhishek Kumar" />
             </div>
           </motion.div>
         </div>
@@ -653,7 +653,7 @@ const Home = () => {
               whileHover={{ y: -10 }}
             >
               <div className="image-border"></div>
-              <img src="/portfolio/images/my_pic.jpg" alt="About Me" />
+              <img src="/portfolio/images/second_image.jpeg" alt="About Me" />
             </motion.div>
 
             <motion.div
