@@ -1,2 +1,2 @@
 # My Portfolio
-https://codingadventure0.github.io/portfolio/
+http://krabhishek-dev.github.io/portfolio
