@@ -757,7 +757,7 @@ const Home = () => {
                   problem-solving skills.
                 </p>
                 <div className="timeline-badges">
-                  <span className="badge">GPA: 8.1/10</span>
+                  <span className="badge">CGPA: 8.21</span>
                   {/* <span className="badge">Dean's List</span> */}
                   {/* <span className="badge">Research Assistant</span> */}
                 </div>
