@@ -784,19 +784,31 @@ const Home = () => {
                 <FaGraduationCap />
               </div>
               <div className="timeline-content">
+
                 <span className="date">2023 - Present</span>
+
                 <h3>Bachelor of Technology in Computer Science (IoT)</h3>
-                <h4>Government Engineering College Vaishali</h4>
+                <h4>Government Engineering College, Vaishali</h4>
+
                 <p>
-                  Gained in-depth knowledge in Data Structures, Algorithms, Web
-                  Development, and Basics of Cybersecurity. Developed strong
-                  foundation in software engineering principles and
-                  problem-solving skills.
+                  Pursuing my degree with a strong focus on{" "}
+                  <span className="highlight">software engineering, system design, and real-world development</span>.
+                  Alongside core subjects like{" "}
+                  <span className="highlight">Data Structures & Algorithms</span>, I actively
+                  build scalable applications using modern technologies and industry practices.
                 </p>
+
+                <p>
+                  My academic journey is not limited to theory — I consistently apply my learning
+                  through <span className="highlight">projects, hackathons, and technical leadership</span>.
+                  This hands-on approach has helped me develop strong problem-solving skills and
+                  a deep understanding of how real-world systems are designed and optimized.
+                </p>
+
                 <div className="timeline-badges">
                   <span className="badge">CGPA: 8.21</span>
-                  {/* <span className="badge">Dean's List</span> */}
-                  {/* <span className="badge">Research Assistant</span> */}
+                  <span className="badge">SIH 2025 Winner (College Level)</span>
+                  <span className="badge">TechFest Web Wizard Winner</span>
                 </div>
               </div>
             </motion.div>
