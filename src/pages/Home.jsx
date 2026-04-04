@@ -365,7 +365,7 @@ const Home = () => {
     {
       icon: <FaGithub />,
       name: "GitHub",
-      link: "https://github.com/codingadventure0",
+      link: "https://github.com/krabhishek-dev",
       color: "#333",
     },
     {
@@ -567,11 +567,11 @@ const Home = () => {
               >
                 <TypewriterEffect
                   text={[
-                    "MERN Stack Developer",
-                    "Node.js & JavaScript Enthusiast",
-                    "Basic Cybersecurity Specialist",
-                    "Embedded Systems Engineer",
-                    "UI/UX Designer",
+                    "Full-Stack MERN Developer",
+                    "Building Scalable & Secure Systems",
+                    "Cybersecurity & System Design Enthusiast",
+                    "IoT & Embedded Systems Innovator",
+                    "Crafting High-Performance Web Experiences",
                   ]}
                   delay={100}
                 />
@@ -583,11 +583,13 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
-              I build{" "}
-              <span className="highlight">scalable web applications</span>
-              real-world projects and solving problems. Passionate about{" "}
-              <span className="highlight">cybersecurity</span> and{" "}
-              <span className="highlight">embedded systems</span>.
+              I design and develop{" "}
+              <span className="highlight">production-ready applications</span> that solve
+              real-world problems with performance, scalability, and security in mind.
+              From <span className="highlight">full-stack web systems</span> to{" "}
+              <span className="highlight">cybersecurity solutions</span> and{" "}
+              <span className="highlight">IoT innovations</span>, I turn ideas into
+              impactful digital products.
             </motion.p>
 
             <div className="hero-buttons">
@@ -695,24 +697,30 @@ const Home = () => {
             >
               <h3>Who am I?</h3>
               <p>
-                I am a{" "}
-                <span className="highlight">
-                  passionate and dynamic tech enthusiast
-                </span>{" "}
-                with expertise in MERN Stack Development, Python Programming,
-                Embedded Systems, and Cybersecurity. With a strong foundation in
-                full-stack web development, I specialize in building{" "}
-                <span className="highlight">
-                  scalable and responsive applications
-                </span>
-                .
+                I’m a{" "}
+                <span className="highlight">full-stack developer and problem solver</span>{" "}
+                who loves building systems that actually make an impact. From developing{" "}
+                <span className="highlight">scalable web applications</span> to experimenting
+                with <span className="highlight">cybersecurity and IoT</span>, I focus on
+                turning ideas into real, working solutions — not just projects.
               </p>
+
               <p>
-                My Python skills extend to{" "}
-                <span className="highlight">AI integration</span>, machine
-                learning, cybersecurity, and automation, allowing me to develop
-                intelligent applications, chatbots, fraud detection systems, and
-                security tools.
+                My core expertise lies in the{" "}
+                <span className="highlight">MERN stack</span>, where I build
+                production-ready applications with clean architecture, performance
+                optimization, and strong security practices. Beyond web development, I
+                actively explore <span className="highlight">automation, system design</span>,
+                and <span className="highlight">intelligent solutions</span> using Python and
+                modern technologies.
+              </p>
+
+              <p>
+                What sets me apart is my approach — I don’t just write code, I{" "}
+                <span className="highlight">analyze problems deeply</span>, design efficient
+                systems, and continuously push myself to build better, faster, and smarter.
+                Whether it's a hackathon, a real-world project, or a new idea, I aim to create
+                solutions that are both technically strong and practically useful.
               </p>
 
               <div className="about-details">
@@ -733,8 +741,9 @@ const Home = () => {
               >
                 <div className="fact-icon">💡</div>
                 <p>
-                  <strong>Fun Fact:</strong> When I'm not coding, I enjoy
-                  reverse engineering software and building IoT devices!
+                  <strong>Fun Fact:</strong> I enjoy breaking things just to understand how they
+                  work — whether it's reverse engineering software or building IoT systems
+                  from scratch.
                 </p>
               </motion.div>
             </motion.div>
