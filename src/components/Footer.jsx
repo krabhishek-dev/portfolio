@@ -31,13 +31,13 @@ const Footer = () => {
               A passionate developer creating innovative solutions with cutting-edge technologies.
             </p>
             <div className="social-links">
-              <a href="https://github.com/codingadventure0" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/krabhishek-dev" target="_blank" rel="noopener noreferrer">
                 <FaGithub />
               </a>
               <a href="https://www.linkedin.com/in/abhishek-kumar977/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/itsabhishek_01" target="_blank" rel="noopener noreferrer">
                 <FaTwitter />
               </a>
               <a href="https://www.instagram.com/root_access_abhi/" target="_blank" rel="noopener noreferrer">
