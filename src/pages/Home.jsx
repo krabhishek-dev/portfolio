@@ -1204,7 +1204,7 @@ const Home = () => {
                 opacity: experienceInView ? 1 : 0,
                 y: experienceInView ? 0 : 50,
               }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               className="timeline-item"
               whileHover={{ y: -5 }}
             >
@@ -1212,24 +1212,28 @@ const Home = () => {
                 <FaBriefcase />
               </div>
               <div className="timeline-content">
-                <span className="date">2023 - Present</span>
-                <h3>Freelance Developer</h3>
+                <span className="date">Mar 2026 – Present</span>
+                <h3>IoT Intern</h3>
+                <h4>Uniconverge Technology (IoT Academy, Upskill Campus)</h4>
+
                 <ul className="responsibilities">
-                  <li>Developed 10+ applications for clients and my college</li>
                   <li>
-                    Conducted security audits identifying 20+ vulnerabilities
+                    Designed and built real-world sensor-based systems using Arduino,
+                    including temperature, soil moisture, and ultrasonic modules.
+                  </li>
+                  <li>
+                    Developed automation projects such as smart traffic control and
+                    automatic street lighting systems using embedded logic.
+                  </li>
+                  <li>
+                    Prototyped IoT communication workflows using ESP8266, LoRaWAN, and
+                    5G concepts for real-time data transmission.
+                  </li>
+                  <li>
+                    Implemented basic embedded security systems using motion and proximity
+                    detection techniques.
                   </li>
                 </ul>
-                <div className="project-highlights">
-                  <h4>Key Projects:</h4>
-                  <div className="projects-grid-home">
-                    {/* <span>E-commerce Platform</span> */}
-                    {/* <span>AI Chatbot</span> */}
-                    <span>Cybersecurity Fuzzer Application for SIH</span>
-                    <span>Hacakathon Website for college</span>
-                    <span>Game Event Website for college</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
 
@@ -1247,16 +1251,96 @@ const Home = () => {
                 <FaBriefcase />
               </div>
               <div className="timeline-content">
-                <span className="date">2024 - Present</span>
+                <span className="date">Jun – Sep 2025</span>
+                <h3>Full Stack Developer Intern</h3>
+                <h4>Evergarden Technologies Pvt. Ltd.</h4>
+
+                <ul className="responsibilities">
+                  <li>
+                    Developed scalable backend services and REST APIs using Node.js, Hono.js,
+                    and PostgreSQL with clean architecture practices.
+                  </li>
+                  <li>
+                    Built responsive and user-friendly UI components integrated with optimized
+                    backend workflows.
+                  </li>
+                  <li>
+                    Worked with modern tools like Redis and Bun to improve performance and
+                    system efficiency.
+                  </li>
+                  <li>
+                    Collaborated with cross-functional teams to deliver production-ready
+                    features following structured development and version control practices.
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{
+                opacity: experienceInView ? 1 : 0,
+                y: experienceInView ? 0 : 50,
+              }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="timeline-item"
+              whileHover={{ y: -5 }}
+            >
+              <div className="timeline-icon">
+                <FaBriefcase />
+              </div>
+              <div className="timeline-content">
+                <span className="date">2025</span>
+                <h3>Freelance Full Stack Developer</h3>
+                <h4>KhetiGrow — Agri-Tech Platform (Live Project)</h4>
+
+                <ul className="responsibilities">
+                  <li>
+                    Built a full-stack agri-tech platform using MERN stack with role-based
+                    access for farmers, experts, and service providers.
+                  </li>
+                  <li>
+                    Implemented features like crop management, expert consultation,
+                    equipment rental, and real-time user interaction.
+                  </li>
+                  <li>
+                    Designed scalable backend architecture and deployed using CI/CD
+                    pipelines on cloud infrastructure.
+                  </li>
+                  <li>
+                    Focused on performance optimization, clean UI/UX, and real-world usability.
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{
+                opacity: experienceInView ? 1 : 0,
+                y: experienceInView ? 0 : 50,
+              }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="timeline-item"
+              whileHover={{ y: -5 }}
+            >
+              <div className="timeline-icon">
+                <FaBriefcase />
+              </div>
+              <div className="timeline-content">
+                <span className="date">2025 - Present</span>
                 <h3>Coding Club Lead</h3>
                 <h4>Government Engineering College Vaishali</h4>
                 <ul className="responsibilities">
                   <li>
-                    Conducted 10+ workshops on web development and cybersecurity
+                    Organized and led 10+ technical workshops on full-stack development and cybersecurity.
                   </li>
-                  <li>Mentored 50+ students in competitive programming</li>
-                  <li>Organized hackathons with 100+ participants</li>
-                  {/* <li>Developed college portal with 90% user satisfaction</li> */}
+                  <li>
+                    Mentored 50+ students in DSA, development, and real-world project building.
+                  </li>
+                  <li>
+                    Managed and executed hackathons and coding events with 100+ participants.
+                  </li>
                 </ul>
               </div>
             </motion.div>
@@ -1280,12 +1364,14 @@ const Home = () => {
                 <h4>Government Engineering College Vaishali</h4>
                 <ul className="responsibilities">
                   <li>
-                    Conducted workshops on Arduino Programming and IoT
-                    Architecture
+                    Conducted hands-on sessions on Arduino, IoT systems, and embedded programming.
                   </li>
-                  <li>Mentored 10+ students in Arduino Programming</li>
-                  <li>Organized competitions with 100+ participants</li>
-                  {/* <li>Developed college portal with 90% user satisfaction</li> */}
+                  <li>
+                    Guided students in building real-world IoT prototypes and mini projects.
+                  </li>
+                  <li>
+                    Organized technical competitions and innovation-driven events.
+                  </li>
                 </ul>
               </div>
             </motion.div>
