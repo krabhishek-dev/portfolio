@@ -151,16 +151,16 @@ const Home = () => {
 
   const skills = [
     { name: "MERN Stack", level: 80, icon: <FaLaptopCode />, color: "#6c63ff" },
-    { name: "Python", level: 75, icon: <FaCode />, color: "#3776ab" },
     { name: "JavaScript", level: 80, icon: <FaCode />, color: "#f0db4f" },
+    { name: "Python", level: 75, icon: <FaCode />, color: "#3776ab" },
     // { name: "AI/ML", level: 80, icon: <FaShieldAlt />, color: "#ff6b6b" },
+    { name: "Embedded Systems", level: 60, icon: <FaCode />, color: "#45aaf2" },
     {
       name: "Cybersecurity",
       level: 50,
       icon: <FaShieldAlt />,
       color: "#4ecdc4",
     },
-    { name: "Embedded Systems", level: 60, icon: <FaCode />, color: "#45aaf2" },
   ];
 
   const tools = [
@@ -184,48 +184,76 @@ const Home = () => {
 
   const achievements = [
     {
+      title: "SIH Winner 2025 (College Level)",
+      description:
+        "Winner of Smart India Hackathon (Internal Round) for building a high-impact scalable solution.",
+      details:
+        "Led the development of an advanced tech solution shortlisted as the top project in the internal SIH 2025 evaluation. Designed a scalable architecture with strong real-world applicability, focusing on performance, security, and innovation. Demonstrated leadership, problem-solving, and rapid prototyping under strict deadlines.",
+      date: "2025",
+    },
+    {
+      title: "TechFest Web Wizard Winner 2025",
+      description:
+        "1st place in Web Development competition for building a production-ready full-stack application.",
+      details:
+        "Developed a high-performance full-stack web application using MERN stack with optimized backend architecture, responsive UI, and real-time features. Stood out among top participants for clean code practices, UI/UX excellence, and scalability-focused implementation.",
+      date: "2025",
+    },
+    {
       title: "SIH Finalist 2024",
       description:
-        "Recognized for innovative tech solution using Python and Cybersecurity.",
+        "National-level finalist for building an advanced cybersecurity solution.",
       details:
-        "Developed a secure web application fuzzer tool platform combining multiples tools like nmap, metasploit, whireshar which can help to dectect vulnurabilities using advanced features and encryption techniques. The solution was selected among top 10 out of 500+ entries in Smart India Hackathon 2024.",
+        "Built a secure web application fuzzing platform integrating tools like Nmap, Metasploit, and Wireshark for vulnerability detection. Implemented automation, encryption techniques, and modular architecture. Selected among top teams from 500+ national entries.",
       date: "November 2024",
     },
     {
-      title: "1st Place Python Competition",
-      description: "Awarded for solving complex programming challenges.",
+      title: "Hackathon Winner (Cybersecurity)",
+      description:
+        "1st place in college-level hackathon for real-time threat detection system.",
       details:
-        "Competed against 200+ participants in a 2-hour coding marathon, solving 15 algorithmic problems with optimal solutions. Demonstrated expertise in data structures and problem-solving under time constraints.",
-      date: "October 2024",
-    },
-    {
-      title: "Hackathon Winner",
-      description: "Secured first place in college-level hackathon.",
-      details:
-        "Led a team of 6 to develop a real-time cybersecurity threat detection dashboard using Python and Cybersecurity. Implemented many tools like nmap, whireshark, metasploit with 90% accuracy.",
+        "Led a team of 6 to develop a cybersecurity dashboard integrating network scanning and attack simulation tools. Achieved ~90% detection efficiency using intelligent analysis and real-time monitoring techniques.",
       date: "September 2024",
     },
     {
-      title: "Web Development Winner",
-      description: "1st prize for innovative full-stack application.",
+      title: "1st Place – Python Coding Competition",
+      description:
+        "Top performer in competitive programming contest.",
       details:
-        "Built an IoT-based classroom management system with React frontend, Node.js backend, and MongoDB. Integrated real-time data visualization and automated attendance tracking using facial recognition.",
+        "Outperformed 200+ participants by solving complex DSA and algorithmic problems in a 2-hour coding marathon. Demonstrated strong problem-solving, optimization, and time management skills.",
+      date: "October 2024",
+    },
+    {
+      title: "Web Development Champion",
+      description:
+        "Awarded for building an innovative IoT-integrated full-stack system.",
+      details:
+        "Developed an IoT-based smart classroom system using React, Node.js, and MongoDB. Implemented real-time monitoring, automated attendance via facial recognition, and data visualization dashboards.",
       date: "May 2024",
     },
     {
-      title: "ISRO Recognition",
-      description: "Appreciation certificate for Pragyan Rover Model.",
+      title: "ISRO Recognition – Pragyan Rover Model",
+      description:
+        "Recognized by ISRO scientists for engineering and innovation excellence.",
       details:
-        "Designed and built a functional scale model of ISRO's Pragyan rover with Arduino-based autonomous navigation system. Recognized by ISRO scientists for technical excellence and innovation in embedded systems.",
+        "Designed and built a functional model of ISRO's Pragyan Rover using Arduino with autonomous navigation. Appreciated by ISRO experts for technical precision and real-world simulation.",
       date: "August 2024",
     },
     {
-      title: "Moon Rover Project Showcase",
+      title: "Moon Rover Project Showcase (Patna Planetarium)",
       description:
-        "Interactive ESP32-based moon rover model with advanced features.",
+        "Selected for public exhibition for advanced IoT-based rover system.",
       details:
-        "Engineered a dual-ESP32 controlled moon rover with joystick-based remote navigation, live video streaming via CP-Plus camera, and multiple smart features. The model is currently on public display at Patna Planetarium, showcasing innovation in embedded systems and IoT integration.",
+        "Engineered a dual-ESP32 powered rover with joystick control, live video streaming, and smart navigation features. Showcased at Patna Planetarium as an innovative embedded systems project.",
       date: "February 2024",
+    },
+    {
+      title: "Coding Club Lead & Technical Contributor",
+      description:
+        "Leading development initiatives and mentoring peers in full-stack technologies.",
+      details:
+        "Actively contributing to real-world projects, organizing coding events, and mentoring students in MERN stack, system design, and competitive programming.",
+      date: "2024 – Present",
     },
   ];
 
@@ -471,7 +499,7 @@ const Home = () => {
 
   return (
     <div className="home-page">
-{/*       <MouseEffect /> */}
+      {/*       <MouseEffect /> */}
       {/* Floating Social Icons */}
       <motion.div
         className="social-icons-container"
@@ -1060,72 +1088,72 @@ const Home = () => {
           {/* Category Cards (shown only on skills tab) */}
           {activeTab === "skills" && (
             <div className="skills-categories">
-            <motion.div
-              whileHover={{ scale: 1.03, y: -5 }}
-              className="category-card"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              <div className="card-glow"></div>
-              <div className="card-content">
-                <div className="card-icon">
-                  <FaCode />
+              <motion.div
+                whileHover={{ scale: 1.03, y: -5 }}
+                className="category-card"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                <div className="card-glow"></div>
+                <div className="card-content">
+                  <div className="card-icon">
+                    <FaCode />
+                  </div>
+                  <h3>Web Development</h3>
+                  <p>MERN Stack, Node.js, JavaScript, HTML/CSS</p>
+                  <div className="tech-stack">
+                    <span>React</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                  </div>
                 </div>
-                <h3>Web Development</h3>
-                <p>MERN Stack, Node.js, JavaScript, HTML/CSS</p>
-                <div className="tech-stack">
-                  <span>React</span>
-                  <span>Express</span>
-                  <span>MongoDB</span>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.03, y: -5 }}
+                className="category-card"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                <div className="card-glow"></div>
+                <div className="card-content">
+                  <div className="card-icon">
+                    <FaMicrochip />
+                  </div>
+                  <h3>Embedded Systems</h3>
+                  <p>IoT, Microcontrollers, Hardware Programming</p>
+                  <div className="tech-stack">
+                    <span>Arduino</span>
+                    <span>ESP32</span>
+                    <span>Raspberry Pi</span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          
-            <motion.div
-              whileHover={{ scale: 1.03, y: -5 }}
-              className="category-card"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-            >
-              <div className="card-glow"></div>
-              <div className="card-content">
-                <div className="card-icon">
-                  <FaMicrochip />
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.03, y: -5 }}
+                className="category-card"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+              >
+                <div className="card-glow"></div>
+                <div className="card-content">
+                  <div className="card-icon">
+                    <FaShieldAlt />
+                  </div>
+                  <h3>Cybersecurity</h3>
+                  <p>Ethical Hacking, Vulnerability Analysis</p>
+                  <div className="tech-stack">
+                    <span>Pen Testing</span>
+                    <span>Networking</span>
+                    <span>Security</span>
+                  </div>
                 </div>
-                <h3>Embedded Systems</h3>
-                <p>IoT, Microcontrollers, Hardware Programming</p>
-                <div className="tech-stack">
-                  <span>Arduino</span>
-                  <span>ESP32</span>
-                  <span>Raspberry Pi</span>
-                </div>
-              </div>
-            </motion.div>
-          
-            <motion.div
-              whileHover={{ scale: 1.03, y: -5 }}
-              className="category-card"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              <div className="card-glow"></div>
-              <div className="card-content">
-                <div className="card-icon">
-                  <FaShieldAlt />
-                </div>
-                <h3>Cybersecurity</h3>
-                <p>Ethical Hacking, Vulnerability Analysis</p>
-                <div className="tech-stack">
-                  <span>Pen Testing</span>
-                  <span>Networking</span>
-                  <span>Security</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+              </motion.div>
+            </div>
           )}
         </div>
       </section>
@@ -1321,7 +1349,7 @@ const Home = () => {
 
       <section className="achievements-section">
         <h2>
-          My <span>Gallery</span> 
+          My <span>Gallery</span>
         </h2>
         <AchievementsCarousel images={achievementsGallery} />
       </section>
