@@ -495,7 +495,52 @@ const Home = () => {
       src: "/portfolio/images/tt-prize.jpg",
       alt: "Table Tennis Prize",
     },
+    
 
+    {
+      src: "/portfolio/images/RoboWinner.jpeg",
+      alt: "Robotics Competition Winner",
+    },
+    {
+      src: "/portfolio/images/ECELL_Winner.jpeg",
+      alt: "E-Cell Challenge Winner",
+    },
+    {
+      src: "/portfolio/images/NSD_Winner.jpeg",
+      alt: "National Sports Day TT Winner",
+    },
+    {
+      src: "/portfolio/images/EUREKA1.jpeg",
+      alt: "Eureka Delhi Winner",
+    },
+    {
+      src: "/portfolio/images/EUREKA2.jpeg",
+      alt: "Eureka Bihar Winner",
+    },
+    {
+      src: "/portfolio/images/SIH25Speech.jpeg",
+      alt: "Introduction Session of SIH 2025",
+    },
+    {
+      src: "/portfolio/images/SIH25Winner.jpeg",
+      alt: "College SIH Winner of 2025",
+    },
+    {
+      src: "/portfolio/images/SIH25Certificates.jpeg",
+      alt: "Winning Certificates of SIH 2025",
+    },
+    {
+      src: "/portfolio/images/TechFest25Winner.jpeg",
+      alt: "TechFest Winner in Web Wizard 2025",
+    },
+    {
+      src: "/portfolio/images/FOSS_Stand2.jpeg",
+      alt: "FOSS 2026 Hackathon Participant",
+    },
+    {
+      src: "/portfolio/images/ISTE_Coding_Contest.jpeg",
+      alt: "Bihar-Jharkhand ISTE Coding Contest Winner",
+    },
   ];
 
   return (
