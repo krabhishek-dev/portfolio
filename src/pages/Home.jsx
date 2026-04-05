@@ -495,6 +495,7 @@ const Home = () => {
       src: "/portfolio/images/tt-prize.jpg",
       alt: "Table Tennis Prize",
     },
+
   ];
 
   return (
