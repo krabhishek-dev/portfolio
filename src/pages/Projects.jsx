@@ -101,6 +101,17 @@ const Projects = () => {
       link: '/projects/8',
       featured: true
 
+    },
+    {
+      id: 9,
+      title: 'Khetigrow',
+      description: '#',
+      // image: alumni,
+      tags: ['React', 'Node.js', 'MongoDB'],
+      category: 'Web Development',
+      link: '/projects/9',
+      featured: true
+
     }
   ];
 
