@@ -14,6 +14,7 @@ import fuzzer from '/images/Fuzzer.webp';
 import alumni from '/images/alumni.jpeg';
 import AirbnbClone from '/images/AirbnbClone.webp';
 import robotCar from '/images/robotCar.jpg';
+import khetigrow from '/images/khetigrow.png';
 
 
 const Projects = () => {
@@ -27,7 +28,7 @@ const Projects = () => {
     title: 'KhetiGrow — Agri-Tech Platform',
     description:
       'Full-stack MERN platform for farmers with crop management, expert consultation, equipment rental, and role-based dashboards.',
-    // image: ,
+    image: khetigrow,
     tags: ['React', 'Node.js', 'MongoDB', 'CI/CD', 'Cloud'],
     category: 'Web Development',
     link: '/projects/khetigrow',
