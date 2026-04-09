@@ -22,87 +22,102 @@ const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
 
   const projects = [
-    {
-      id: 1,
-      title: 'Pragyan Rover Model (Chandrayaan 3 Simulation)',
-      description: 'Remote-controlled rover simulating ISRO’s Pragyan rover operations.',
-      image: pragyanImage ,
-      tags: ['Embedded Systems', 'IoT', 'Arduino'],
-      category: 'Embedded Systems',
-      link: '/projects/1',
-      // featured: true
-    },
-    {
-      id: 2,
-      title: 'Mars Rover Model',
-      description: 'Joystick-controlled rover using dual ESP32 with live video feed and display support.',
-      image: marsImage,
-      tags: ['ESP32', 'IoT', 'Real-time'],
-      category: 'Embedded Systems',
-      link: '/projects/2',
-      featured: true
-
-    },
-    {
-      id: 3,
-      title: 'GEMINI-AI Jarvis',
-      description: 'AI-powered personal assistant with Google Gemini and OpenAI integration.',
-      image: jarvis,
-      tags: ['AI', 'NLP', 'Automation'],
-      category: 'AI/ML',
-      link: '/projects/3',
-      featured: true
-    },
-    {
-      id: 4,
-      title: 'Web Application Fuzzer',
-      description: 'Security tool to identify vulnerabilities in web applications.',
-      image: fuzzer,
-      tags: ['Cybersecurity', 'Python', 'Security'],
-      category: 'Cybersecurity',
-      link: '/projects/4'
-    },
-    {
-      id: 5,
-      title: 'Faculty Leave Management',
-      description: 'Full-stack application with role-based authentication.',
-      image: leave,
-      tags: ['Node.Js', 'MongoDB', 'Full-stack'],
-      category: 'Web Development',
-      link: '/projects/5',
-      featured: true
-
-    },
-    {
-      id: 6,
-      title: 'Wanderlust - Airbnb Clone',
-      description: 'Online rental marketplace with secure booking and property listing features.',
-      image: AirbnbClone,
-      tags: ['Node.Js', 'MongoDB', 'Full-stack'],
-      category: 'Web Development',
-      link: '/projects/6'
-    },
-    {
-      id: 7,
-      title: 'Multipurpose Robot Car',
-      description: 'Robot car with voice/manual/obstacle/human-following modes and real-world applications.',
-      image: robotCar,
-      tags: ['Arduino', 'Sensors', 'Robotics'],
-      category: 'Embedded Systems',
-      link: '/projects/7'
-    },
-    {
-      id: 8,
-      title: 'Advanced Alumni Portal(ProtoType)',
-      description: 'Interactive alumni directory with geolocation mapping and dynamic filters.',
-      image: alumni,
-      tags: ['React', 'Node.js', 'MongoDB'],
-      category: 'Web Development',
-      link: '/projects/8',
-      featured: true
-
-    }
-  ];
+  {
+    id: 1,
+    title: 'KhetiGrow — Agri-Tech Platform',
+    description:
+      'Full-stack MERN platform for farmers with crop management, expert consultation, equipment rental, and role-based dashboards.',
+    // image: ,
+    tags: ['React', 'Node.js', 'MongoDB', 'CI/CD', 'Cloud'],
+    category: 'Web Development',
+    link: '/projects/khetigrow',
+    featured: true,
+  },
+  {
+    id: 2,
+    title: 'Web Application Fuzzer (SIH Project)',
+    description:
+      'Advanced cybersecurity tool integrating Nmap, Metasploit, and automated scanning to detect vulnerabilities in web applications.',
+    image: fuzzer,
+    tags: ['Cybersecurity', 'Python', 'Automation', 'Security'],
+    category: 'Cybersecurity',
+    link: '/projects/4',
+    featured: true,
+  },
+  {
+    id: 3,
+    title: 'GEMINI-AI Jarvis Assistant',
+    description:
+      'AI-powered assistant with Gemini + OpenAI integration for automation, NLP-based commands, and smart task execution.',
+    image: jarvis,
+    tags: ['AI', 'NLP', 'Automation', 'APIs'],
+    category: 'AI/ML',
+    link: '/projects/3',
+    featured: true,
+  },
+  {
+    id: 4,
+    title: 'Mars Rover (ESP32 Real-Time System)',
+    description:
+      'Dual ESP32-based rover with joystick control, real-time video streaming, and embedded system communication.',
+    image: marsImage,
+    tags: ['ESP32', 'IoT', 'Real-time', 'Embedded'],
+    category: 'Embedded Systems',
+    link: '/projects/2',
+    featured: true,
+  },
+  {
+    id: 5,
+    title: 'Pragyan Rover Model (ISRO Simulation)',
+    description:
+      'Arduino-based rover simulating Chandrayaan-3 Pragyan with autonomous navigation and real-world terrain movement.',
+    image: pragyanImage,
+    tags: ['Arduino', 'IoT', 'Embedded Systems'],
+    category: 'Embedded Systems',
+    link: '/projects/1',
+  },
+  {
+    id: 6,
+    title: 'Faculty Leave Management System',
+    description:
+      'Role-based full-stack system with authentication, approval workflows, and dashboard analytics.',
+    image: leave,
+    tags: ['Node.js', 'MongoDB', 'Auth', 'Full-stack'],
+    category: 'Web Development',
+    link: '/projects/5',
+    featured: true,
+  },
+  {
+    id: 7,
+    title: 'Wanderlust — Airbnb Clone',
+    description:
+      'Full-featured rental platform with secure booking, listing management, and responsive UI design.',
+    image: AirbnbClone,
+    tags: ['Node.js', 'MongoDB', 'EJS', 'Full-stack'],
+    category: 'Web Development',
+    link: '/projects/6',
+  },
+  {
+    id: 8,
+    title: 'Multipurpose Robot Car',
+    description:
+      'Smart robotic system supporting voice control, obstacle avoidance, human-following, and manual modes.',
+    image: robotCar,
+    tags: ['Arduino', 'Sensors', 'Robotics'],
+    category: 'Embedded Systems',
+    link: '/projects/7',
+  },
+  {
+    id: 9,
+    title: 'Advanced Alumni Portal',
+    description:
+      'Interactive alumni platform with geolocation mapping, advanced filters, and dynamic user connections.',
+    image: alumni,
+    tags: ['React', 'Node.js', 'MongoDB'],
+    category: 'Web Development',
+    link: '/projects/8',
+  }
+];
 
   const filters = ['All', 'Web Development', 'AI/ML', 'Embedded Systems', 'Cybersecurity'];
 
