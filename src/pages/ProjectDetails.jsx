@@ -198,6 +198,28 @@ const ProjectDetails = () => {
         projectImages.alumni.image2,
         projectImages.alumni.image3,
       ]
+    },
+    {
+      id: 9,
+      title: 'Khetigrow',
+      description: 'Interactive alumni network platform with location-based filtering.',
+      longDescription: 'Built a responsive platform for alumni networking featuring interactive maps, filterable search, and secure profile management. Users can locate peers, share experiences, and stay connected.',
+      image: '/images/alumni.jpg',
+      tags: ['React', 'MongoDB', 'Node.js'],
+      githubLink: 'https://github.com/codingadventure0/Alumni-Association.git',
+      liveLink: 'https://alumni-connection.netlify.app/',
+      features: [
+        'Interactive alumni map',
+        'Profile updates and directory',
+        'Search and filter options',
+        'Fully responsive UI'
+      ],
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB'],
+      images: [
+        projectImages.alumni.image1,
+        projectImages.alumni.image2,
+        projectImages.alumni.image3,
+      ]
     }
   ];
 
