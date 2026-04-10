@@ -200,22 +200,45 @@ const ProjectDetails = () => {
       ]
     },
     {
-      id: 9,
-      title: 'Khetigrow',
-      description: '#',
-      longDescription: '#',
-      image: '#',
-      tags: ['React', 'MongoDB', 'Node.js'],
-      githubLink: '#',
-      liveLink: 'https://khetigrow.in/',
-      features: [
-        '#'
-      ],
-      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-      images: [
-        
-      ]
-    }
+  id: 8,
+  title: 'KhetiGrow — Smart Agri-Tech Platform',
+  description: 'Full-stack platform empowering farmers with crop management, expert consultation, and agri-services.',
+  
+  longDescription: 'KhetiGrow is a production-ready agri-tech platform designed to digitally empower farmers by providing end-to-end solutions. The platform enables users to manage crops, connect with agricultural experts, access government schemes, and rent farming equipment — all in one place. Built with scalability and usability in mind, it features role-based dashboards, secure authentication, and a responsive UI to ensure seamless experience across devices.',
+
+  image: '/images/khetigrow.png',
+
+  tags: ['React', 'Node.js', 'MongoDB', 'Full-stack', 'CI/CD'],
+
+  githubLink: '#', 
+  liveLink: 'https://khetigrow.in', 
+
+  features: [
+    'Role-based authentication (Farmer, Expert, Service Provider)',
+    'Crop management and farm portfolio tracking',
+    'Expert consultation and farmer-to-expert interaction system',
+    'Agri equipment rental marketplace',
+    'Government schemes and crop insurance integration',
+    'Secure authentication with scalable backend architecture',
+    'Responsive UI with smooth user experience'
+  ],
+
+  technologies: [
+    'React.js',
+    'Node.js',
+    'Express.js',
+    'MongoDB',
+    'JWT Authentication',
+    'Cloud Deployment',
+    'CI/CD Pipelines'
+  ],
+
+  images: [
+    projectImages.khetigrow.image1,
+    projectImages.khetigrow.image2,
+    projectImages.khetigrow.image3,
+  ]
+}
   ];
 
   useEffect(() => {
