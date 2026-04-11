@@ -53,5 +53,11 @@ export const projectImages = {
       image1: '/portfolio/images/alumni1.png',
       image2: '/portfolio/images/alumni2.png',
       image3: '/portfolio/images/alumni3.png',
+    },
+    khetigrow: {
+      main: '/portfolio/images/khetigrow.png',
+      image1: '/portfolio/images/khetigrow2.png',
+      image2: '/portfolio/images/khetigrow3.png',
+      image3: '/portfolio/images/khetigrow4.png',
     }
   };
