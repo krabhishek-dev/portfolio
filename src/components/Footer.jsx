@@ -26,9 +26,9 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-about">
-            <h3>MERN Stack Innovator</h3>
+            <h3>Full-Stack & AI Systems Engineer</h3>
             <p>
-              A passionate developer creating innovative solutions with cutting-edge technologies.
+              Passionate engineer building scalable web architectures, Generative AI workflows, and high-performance systems.
             </p>
             <div className="social-links">
               <a href="https://github.com/krabhishek-dev" target="_blank" rel="noopener noreferrer">

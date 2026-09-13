@@ -64,7 +64,7 @@ const Navbar = () => {
     >
       <div className="container">
         <Link to="/" className="logo">
-          <span>MERN</span>Stack Innovator
+          <span>Abhishek</span>.dev
         </Link>
 
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>

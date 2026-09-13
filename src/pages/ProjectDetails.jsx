@@ -200,45 +200,107 @@ const ProjectDetails = () => {
       ]
     },
     {
-  id: 8,
-  title: 'KhetiGrow — Smart Agri-Tech Platform',
-  description: 'Full-stack platform empowering farmers with crop management, expert consultation, and agri-services.',
-  
-  longDescription: 'KhetiGrow is a production-ready agri-tech platform designed to digitally empower farmers by providing end-to-end solutions. The platform enables users to manage crops, connect with agricultural experts, access government schemes, and rent farming equipment — all in one place. Built with scalability and usability in mind, it features role-based dashboards, secure authentication, and a responsive UI to ensure seamless experience across devices.',
-
-  image: '/images/khetigrow.png',
-
-  tags: ['React', 'Node.js', 'MongoDB', 'Full-stack', 'CI/CD'],
-
-  githubLink: '#', 
-  liveLink: 'https://khetigrow.in', 
-
-  features: [
-    'Role-based authentication (Farmer, Expert, Service Provider)',
-    'Crop management and farm portfolio tracking',
-    'Expert consultation and farmer-to-expert interaction system',
-    'Agri equipment rental marketplace',
-    'Government schemes and crop insurance integration',
-    'Secure authentication with scalable backend architecture',
-    'Responsive UI with smooth user experience'
-  ],
-
-  technologies: [
-    'React.js',
-    'Node.js',
-    'Express.js',
-    'MongoDB',
-    'JWT Authentication',
-    'Cloud Deployment',
-    'CI/CD Pipelines'
-  ],
-
-  images: [
-    projectImages.khetigrow.image1,
-    projectImages.khetigrow.image2,
-    projectImages.khetigrow.image3,
-  ]
-}
+      id: 10,
+      slug: 'riwaz',
+      title: 'Riwaz Events — Event Marketplace Platform',
+      description: 'Full-stack marketplace platform connecting users with venues, catering, photography, and event services.',
+      longDescription: 'Riwaz Events is an end-to-end full-stack event marketplace platform built to streamline the discovery and booking of event services. Users can browse and book verified venues, catering services, photographers, event decorators, and entertainers. Developed with Next.js, Node.js, Express.js, and PostgreSQL, the platform features dynamic service discovery, partner listing dashboards, real-time booking status, and an automated 20% advance token payment workflow integrated with Razorpay.',
+      image: '/portfolio/images/riwaz_events.jpg',
+      tags: ['Next.js', 'PostgreSQL', 'Express.js', 'Razorpay', 'Full-stack'],
+      githubLink: '#',
+      liveLink: '#',
+      features: [
+        'Multi-service discovery for venues, catering, photography, and decoration',
+        'Advanced filtering by location, price range, capacity, and ratings',
+        '20% advance token payment flow powered by Razorpay gateway',
+        'Partner listing management dashboard for event service providers',
+        'Scalable relational database architecture on PostgreSQL',
+        'Next.js server-side rendering for optimal performance and SEO'
+      ],
+      technologies: ['Next.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Razorpay', 'Tailwind CSS'],
+      images: [
+        '/portfolio/images/riwaz_events.jpg',
+      ]
+    },
+    {
+      id: 9,
+      slug: 'khetigrow',
+      title: 'KhetiGrow — Smart Agri-Tech Platform',
+      description: 'Full-stack platform empowering farmers with crop management, expert consultation, and agri-services.',
+      longDescription: 'KhetiGrow is a production-ready agri-tech platform designed to digitally empower farmers by providing end-to-end solutions. The platform enables users to manage crops, connect with agricultural experts, access government schemes, and rent farming equipment — all in one place. Built with scalability and usability in mind, it features role-based dashboards, secure authentication, and a responsive UI to ensure seamless experience across devices.',
+      image: '/portfolio/images/khetigrow.png',
+      tags: ['React', 'Node.js', 'MongoDB', 'Full-stack', 'CI/CD'],
+      githubLink: '#', 
+      liveLink: 'https://khetigrow.in', 
+      features: [
+        'Role-based authentication (Farmer, Expert, Service Provider)',
+        'Crop management and farm portfolio tracking',
+        'Expert consultation and farmer-to-expert interaction system',
+        'Agri equipment rental marketplace',
+        'Government schemes and crop insurance integration',
+        'Secure authentication with scalable backend architecture',
+        'Continuous integration & deployment via CI/CD pipelines'
+      ],
+      technologies: [
+        'React.js',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'JWT Authentication',
+        'Cloud Deployment',
+        'CI/CD Pipelines'
+      ],
+      images: [
+        projectImages.khetigrow.image1,
+        projectImages.khetigrow.image2,
+        projectImages.khetigrow.image3,
+      ]
+    },
+    {
+      id: 11,
+      slug: 'quantevo',
+      title: 'Quantevo — Smart Test Portal',
+      description: 'Secure online testing platform featuring real-time timer, auto-evaluation, and anti-cheating mechanisms.',
+      longDescription: 'Quantevo is a robust and secure online examination portal designed for academic institutions and competitive testing. It features JWT-based role authentication, a real-time synchronized timer, instantaneous auto-evaluation with granular score analytics, full-screen enforcement, and anti-cheating mechanisms such as tab-switch detection to ensure test integrity.',
+      image: '/portfolio/images/quantevo.jpg',
+      tags: ['MERN Stack', 'JWT', 'Security', 'Anti-Cheating', 'Real-time'],
+      githubLink: '#',
+      liveLink: '#',
+      features: [
+        'Secure JWT authentication for candidate verification',
+        'Real-time synchronized countdown exam timer',
+        'Automatic grading and comprehensive score analysis cards',
+        'Anti-cheating mechanisms with full-screen lock and tab-switch alerts',
+        'Categorized question palette with answered and marked status',
+        'Responsive and high-contrast dark theme interface'
+      ],
+      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'CSS3'],
+      images: [
+        '/portfolio/images/quantevo.jpg',
+      ]
+    },
+    {
+      id: 12,
+      slug: 'heart-disease',
+      title: 'Heart Disease Detection System (ML)',
+      description: 'End-to-end predictive healthcare machine learning model developed at NIAMT Ranchi.',
+      longDescription: 'Engineered an end-to-end Heart Disease Detection system using Python, Pandas, Scikit-learn, and XGBoost during research internship at National Institute of Advanced Manufacturing Technology (NIAMT), Ranchi. Compared multiple machine learning algorithms including Logistic Regression, Random Forest, Support Vector Machines, and XGBoost. Performed thorough data preprocessing, outlier removal, feature selection, and hyperparameter tuning to achieve top-tier Precision, Recall, and F1-score.',
+      image: '/portfolio/images/coding.webp',
+      tags: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas', 'Machine Learning'],
+      githubLink: '#',
+      liveLink: '#',
+      features: [
+        'Comparative benchmarking across 5+ machine learning algorithms',
+        'Data preprocessing, normalization, and feature correlation analysis',
+        'Hyperparameter optimization using GridSearchCV & K-Fold cross-validation',
+        'Rigorous diagnostic evaluation using Precision, Recall, and F1-Score',
+        'Production-ready inference pipeline for predictive diagnosis'
+      ],
+      technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'XGBoost', 'Matplotlib'],
+      images: [
+        '/portfolio/images/coding.webp',
+      ]
+    }
   ];
 
   useEffect(() => {
@@ -249,7 +311,7 @@ const ProjectDetails = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const project = projects.find(p => p.id === parseInt(id));
+  const project = projects.find(p => String(p.id) === String(id) || p.slug === id);
 
   if (!project) {
     return (

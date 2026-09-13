@@ -59,5 +59,13 @@ export const projectImages = {
       image1: '/portfolio/images/khetigrow2.png',
       image2: '/portfolio/images/khetigrow3.png',
       image3: '/portfolio/images/khetigrow4.png',
+    },
+    riwaz: {
+      main: '/portfolio/images/riwaz_events.jpg',
+      image1: '/portfolio/images/riwaz_events.jpg',
+    },
+    quantevo: {
+      main: '/portfolio/images/quantevo.jpg',
+      image1: '/portfolio/images/quantevo.jpg',
     }
   };

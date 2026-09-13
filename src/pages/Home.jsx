@@ -41,6 +41,13 @@ import { GiPingPongBat } from "react-icons/gi";
 import {
   SiMongodb,
   SiExpress,
+  SiNextdotjs,
+  SiTypescript,
+  SiPostgresql,
+  SiTailwindcss,
+  SiPostman,
+  SiScikitlearn,
+  SiOpenai,
   SiTensorflow,
   SiPytorch,
   SiDjango,
@@ -49,11 +56,12 @@ import {
   SiArduino,
   SiRaspberrypi,
   SiMetasploit,
+  SiLeetcode,
+  SiHackerrank,
 } from "react-icons/si";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { FiMail } from "react-icons/fi";
-import { SiLeetcode, SiHackerrank } from "react-icons/si";
 import "../assets/styles/home.css";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
@@ -166,86 +174,67 @@ const Home = () => {
   const [ref, inView] = useInView({ threshold: 0.1 });
 
   const skills = [
-    { name: "MERN Stack", level: 80, icon: <FaLaptopCode />, color: "#6c63ff" },
-    { name: "JavaScript", level: 80, icon: <FaCode />, color: "#f0db4f" },
-    { name: "Python", level: 75, icon: <FaCode />, color: "#3776ab" },
-    // { name: "AI/ML", level: 80, icon: <FaShieldAlt />, color: "#ff6b6b" },
-    { name: "Embedded Systems", level: 60, icon: <FaCode />, color: "#45aaf2" },
-    {
-      name: "Cybersecurity",
-      level: 50,
-      icon: <FaShieldAlt />,
-      color: "#4ecdc4",
-    },
+    { name: "Full-Stack Web (Next.js, React, Node)", level: 90, icon: <FaLaptopCode />, color: "#6c63ff" },
+    { name: "Generative AI & LLMs (LangChain, OpenAI)", level: 85, icon: <FaBrain />, color: "#00d4ff" },
+    { name: "Python & Machine Learning", level: 82, icon: <FaCode />, color: "#3776ab" },
+    { name: "Backend & DBs (PostgreSQL, MongoDB, APIs)", level: 88, icon: <SiPostgresql />, color: "#2ec866" },
+    { name: "Cloud & DevOps (Docker, AWS, CI/CD)", level: 78, icon: <FaAws />, color: "#f89f1b" },
+    { name: "Embedded Systems & IoT (ESP32, Arduino)", level: 75, icon: <FaMicrochip />, color: "#ff6b9d" },
   ];
 
   const tools = [
+    { name: "Next.js", icon: <SiNextdotjs /> },
     { name: "React", icon: <FaReact /> },
+    { name: "TypeScript", icon: <SiTypescript /> },
     { name: "Node.js", icon: <FaNodeJs /> },
-    { name: "Express", icon: <SiExpress /> },
+    { name: "Express.js", icon: <SiExpress /> },
+    { name: "PostgreSQL", icon: <SiPostgresql /> },
     { name: "MongoDB", icon: <SiMongodb /> },
-    // { name: "TensorFlow", icon: <SiTensorflow /> },
-    // { name: "PyTorch", icon: <SiPytorch /> },
-    // { name: "Django", icon: <SiDjango /> },
-    // { name: "Flask", icon: <SiFlask /> },
-    // { name: "Docker", icon: <FaDocker /> },
-    { name: "Git", icon: <FaGit /> },
+    { name: "Python", icon: <FaPython /> },
+    { name: "OpenAI / GenAI", icon: <SiOpenai /> },
+    { name: "Scikit-Learn", icon: <SiScikitlearn /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+    { name: "Docker", icon: <FaDocker /> },
     { name: "AWS", icon: <FaAws /> },
-    { name: "Firebase", icon: <SiFirebase /> },
+    { name: "Git & GitHub", icon: <FaGit /> },
+    { name: "Postman", icon: <SiPostman /> },
+    { name: "Linux", icon: <FaLinux /> },
     { name: "Arduino", icon: <SiArduino /> },
     { name: "Raspberry Pi", icon: <SiRaspberrypi /> },
-    // { name: "Kali Linux", icon: <SiKaliLinux /> },
-    { name: "Metasploit", icon: <SiMetasploit /> },
   ];
 
   const achievements = [
     {
-      title: "SIH Winner 2025 (College Level)",
+      title: "1st Rank — 2nd ISTE Bihar & Jharkhand Coding Contest 2026",
       description:
-        "Winner of Smart India Hackathon (Internal Round) for building a high-impact scalable solution.",
+        "Top performer across Bihar and Jharkhand in the prestigious ISTE Students' Convention coding competition.",
       details:
-        "Led the development of an advanced tech solution shortlisted as the top project in the internal SIH 2025 evaluation. Designed a scalable architecture with strong real-world applicability, focusing on performance, security, and innovation. Demonstrated leadership, problem-solving, and rapid prototyping under strict deadlines.",
+        "Outperformed top student programmers across Bihar & Jharkhand by solving complex algorithmic and data structure problems with optimal time complexity in a 2-hour coding marathon.",
+      date: "2026",
+    },
+    {
+      title: "1st Rank — Internal Smart India Hackathon (SIH 2025)",
+      description:
+        "1st Place at GEC Vaishali for engineering a high-impact, production-ready scalable solution.",
+      details:
+        "Led team to first place in the internal SIH 2025 evaluation. Designed end-to-end architecture focusing on performance, modularity, security, and real-world applicability under tight deadlines.",
       date: "2025",
     },
     {
-      title: "TechFest Web Wizard Winner 2025",
+      title: "1st Rank — Web Wizard Competition (Vision 2025 Tech Fest)",
       description:
-        "1st place in Web Development competition for building a production-ready full-stack application.",
+        "Champion in Web Development contest at GEC Vaishali Tech Fest.",
       details:
-        "Developed a high-performance full-stack web application using MERN stack with optimized backend architecture, responsive UI, and real-time features. Stood out among top participants for clean code practices, UI/UX excellence, and scalability-focused implementation.",
+        "Developed a high-performance full-stack web application with optimized backend APIs, responsive glassmorphic UI, and real-time interactive features, earning 1st prize among competitive developers.",
       date: "2025",
     },
     {
-      title: "SIH Finalist 2024",
+      title: "SIH 2024 National Finalist — MERN Alumni Portal",
       description:
-        "National-level finalist for building an advanced cybersecurity solution.",
+        "Selected as National Finalist for building an advanced alumni portal under Government problem statement.",
       details:
-        "Built a secure web application fuzzing platform integrating tools like Nmap, Metasploit, and Wireshark for vulnerability detection. Implemented automation, encryption techniques, and modular architecture. Selected among top teams from 500+ national entries.",
-      date: "November 2024",
-    },
-    {
-      title: "Hackathon Winner (Cybersecurity)",
-      description:
-        "1st place in college-level hackathon for real-time threat detection system.",
-      details:
-        "Led a team of 6 to develop a cybersecurity dashboard integrating network scanning and attack simulation tools. Achieved ~90% detection efficiency using intelligent analysis and real-time monitoring techniques.",
-      date: "September 2024",
-    },
-    {
-      title: "1st Place – Python Coding Competition",
-      description:
-        "Top performer in competitive programming contest.",
-      details:
-        "Outperformed 200+ participants by solving complex DSA and algorithmic problems in a 2-hour coding marathon. Demonstrated strong problem-solving, optimization, and time management skills.",
-      date: "October 2024",
-    },
-    {
-      title: "Web Development Champion",
-      description:
-        "Awarded for building an innovative IoT-integrated full-stack system.",
-      details:
-        "Developed an IoT-based smart classroom system using React, Node.js, and MongoDB. Implemented real-time monitoring, automated attendance via facial recognition, and data visualization dashboards.",
-      date: "May 2024",
+        "Architected an interactive, secure MERN-stack alumni networking platform with geolocation mapping and dynamic filters for the Government of India problem statement, selected among 500+ national entries.",
+      date: "2024",
     },
     {
       title: "ISRO Recognition – Pragyan Rover Model",
@@ -253,7 +242,7 @@ const Home = () => {
         "Recognized by ISRO scientists for engineering and innovation excellence.",
       details:
         "Designed and built a functional model of ISRO's Pragyan Rover using Arduino with autonomous navigation. Appreciated by ISRO experts for technical precision and real-world simulation.",
-      date: "August 2024",
+      date: "2024",
     },
     {
       title: "Moon Rover Project Showcase (Patna Planetarium)",
@@ -261,15 +250,15 @@ const Home = () => {
         "Selected for public exhibition for advanced IoT-based rover system.",
       details:
         "Engineered a dual-ESP32 powered rover with joystick control, live video streaming, and smart navigation features. Showcased at Patna Planetarium as an innovative embedded systems project.",
-      date: "February 2024",
+      date: "2024",
     },
     {
-      title: "Coding Club Lead & Technical Contributor",
+      title: "Coding & Technical Club Lead",
       description:
-        "Leading development initiatives and mentoring peers in full-stack technologies.",
+        "Leading development initiatives and mentoring 50+ peers in full-stack and competitive coding.",
       details:
-        "Actively contributing to real-world projects, organizing coding events, and mentoring students in MERN stack, system design, and competitive programming.",
-      date: "2024 – Present",
+        "Conducting weekly coding sessions, hackathon prep, and hands-on workshops on full-stack development, modern backend systems, and embedded IoT hardware.",
+      date: "2025 – Present",
     },
   ];
 
@@ -342,28 +331,28 @@ const Home = () => {
   // Interests data
   const interests = [
     {
-      name: "Software Development",
+      name: "Full-Stack & Backend Systems",
       icon: <FaCode />,
-      description: "Building applications and writing code to solve problems.",
+      description: "Building scalable web applications, microservices, and high-performance REST APIs.",
       color: "#4B8BBE",
     },
     {
-      name: "Cybersecurity",
-      icon: <FaShieldAlt />,
-      description: "Protecting systems and networks from digital threats.",
-      color: "#00BFA6",
+      name: "Generative AI & LLMs",
+      icon: <FaBrain />,
+      description: "LangChain, OpenAI API integration, prompt engineering, and agentic workflows.",
+      color: "#00d4ff",
     },
     {
-      name: "IoT",
-      icon: <FaNetworkWired />,
-      description: "The interconnected world of devices and data exchange.",
-      color: "#6c63ff",
-    },
-    {
-      name: "Robotics",
+      name: "Machine Learning",
       icon: <FaRobot />,
-      description: "Human-robot interaction and automation technologies.",
-      color: "#FFA500",
+      description: "Predictive modeling, data preprocessing, feature engineering with Scikit-learn & XGBoost.",
+      color: "#ff6b9d",
+    },
+    {
+      name: "System Design & Cloud",
+      icon: <FaNetworkWired />,
+      description: "Architecting distributed systems, Docker containers, AWS infrastructure, and CI/CD.",
+      color: "#6c63ff",
     },
   ];
 
@@ -407,6 +396,30 @@ const Home = () => {
   ];
 
   const achievementsGallery = [
+    {
+      src: "/portfolio/images/ISTE_Coding_Contest.jpeg",
+      alt: "Bihar-Jharkhand ISTE Coding Contest Winner 2026",
+      caption: {
+        title: "1st Rank — 2nd ISTE Bihar & Jharkhand Coding Contest 2026",
+        description: "Clinched 1st Rank across Bihar & Jharkhand in the competitive coding contest at the 2nd ISTE Students' Convention 2026, demonstrating algorithmic excellence and optimal DSA solutions."
+      }
+    },
+    {
+      src: "/portfolio/images/SIH25Winner.jpeg",
+      alt: "College SIH Winner of 2025",
+      caption: {
+        title: "1st Rank — Internal Smart India Hackathon (SIH 2025)",
+        description: "Champion of internal SIH 2025 at GEC Vaishali for leading the development of a production-ready scalable architecture addressing critical real-world challenges."
+      }
+    },
+    {
+      src: "/portfolio/images/TechFest25Winner.jpeg",
+      alt: "TechFest Winner in Web Wizard 2025",
+      caption: {
+        title: "1st Rank — Web Wizard Competition (Vision 2025 Tech Fest)",
+        description: "Won 1st prize at GEC Vaishali Tech Fest for developing an optimized full-stack web application with responsive UI and modern backend workflows."
+      }
+    },
     {
       src: "/portfolio/images/sih-winner.jpg",
       alt: "Hackathon Winner",
@@ -630,11 +643,11 @@ const Home = () => {
               >
                 <TypewriterEffect
                   text={[
-                    "Full-Stack MERN Developer",
-                    "Building Scalable & Secure Systems",
-                    "Cybersecurity & System Design Enthusiast",
-                    "IoT & Embedded Systems Innovator",
-                    "Crafting High-Performance Web Experiences",
+                    "Full-Stack & AI Systems Engineer",
+                    "Building Scalable Web & LLM Workflows",
+                    "Machine Learning & Agentic Architect",
+                    "Next.js, React & Node.js Developer",
+                    "Crafting High-Performance Applications",
                   ]}
                   delay={100}
                 />
@@ -646,13 +659,13 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
             >
-              I design and develop{" "}
-              <span className="highlight">production-ready applications</span> that solve
-              real-world problems with performance, scalability, and security in mind.
-              From <span className="highlight">full-stack web systems</span> to{" "}
-              <span className="highlight">cybersecurity solutions</span> and{" "}
-              <span className="highlight">IoT innovations</span>, I turn ideas into
-              impactful digital products.
+              Computer Science (IoT) engineer with hands-on experience building{" "}
+              <span className="highlight">scalable web applications</span>, robust{" "}
+              <span className="highlight">REST APIs</span>, and integrating{" "}
+              <span className="highlight">AI models & LLM workflows</span>. From modern{" "}
+              <span className="highlight">Next.js & PostgreSQL architectures</span> to{" "}
+              <span className="highlight">Generative AI solutions</span>, I engineer production-grade
+              digital products with performance and precision.
             </motion.p>
 
             <div className="hero-buttons">
@@ -761,29 +774,25 @@ const Home = () => {
               <h3>Who am I?</h3>
               <p>
                 I’m a{" "}
-                <span className="highlight">full-stack developer and problem solver</span>{" "}
-                who loves building systems that actually make an impact. From developing{" "}
-                <span className="highlight">scalable web applications</span> to experimenting
-                with <span className="highlight">cybersecurity and IoT</span>, I focus on
-                turning ideas into real, working solutions — not just projects.
+                <span className="highlight">Full-Stack Software Engineer & AI Enthusiast</span>{" "}
+                pursuing B.Tech in CSE (IoT) at Government Engineering College Vaishali. I specialize
+                in engineering <span className="highlight">scalable web applications</span>, robust REST APIs,
+                and integrating <span className="highlight">AI models & LLM workflows</span> into production systems.
               </p>
 
               <p>
-                My core expertise lies in the{" "}
-                <span className="highlight">MERN stack</span>, where I build
-                production-ready applications with clean architecture, performance
-                optimization, and strong security practices. Beyond web development, I
-                actively explore <span className="highlight">automation, system design</span>,
-                and <span className="highlight">intelligent solutions</span> using Python and
-                modern technologies.
+                My technical capabilities span across{" "}
+                <span className="highlight">Next.js, React, Node.js, Express, TypeScript, and PostgreSQL / MongoDB</span>{" "}
+                for modern web development, combined with{" "}
+                <span className="highlight">Python, LangChain, OpenAI APIs, Scikit-learn, and XGBoost</span>{" "}
+                for machine learning and intelligent applications.
               </p>
 
               <p>
-                What sets me apart is my approach — I don’t just write code, I{" "}
-                <span className="highlight">analyze problems deeply</span>, design efficient
-                systems, and continuously push myself to build better, faster, and smarter.
-                Whether it's a hackathon, a real-world project, or a new idea, I aim to create
-                solutions that are both technically strong and practically useful.
+                As the <span className="highlight">Coding & Technical Club Lead</span> at GEC Vaishali and an active
+                competitive programmer (1st Rank in ISTE 2026 Coding Contest, SIH Winner), I believe in{" "}
+                <span className="highlight">deep problem analysis</span>, scalable system architecture, and building
+                high-impact software that delivers real-world value.
               </p>
 
               <div className="about-details">
@@ -848,30 +857,29 @@ const Home = () => {
               </div>
               <div className="timeline-content">
 
-                <span className="date">2023 - Present</span>
+                <span className="date">2023 – 2027</span>
 
-                <h3>Bachelor of Technology in Computer Science (IoT)</h3>
-                <h4>Government Engineering College, Vaishali</h4>
+                <h3>B.Tech in Computer Science & Engineering (IoT)</h3>
+                <h4>Government Engineering College Vaishali, Bihar</h4>
 
                 <p>
-                  Pursuing my degree with a strong focus on{" "}
-                  <span className="highlight">software engineering, system design, and real-world development</span>.
-                  Alongside core subjects like{" "}
-                  <span className="highlight">Data Structures & Algorithms</span>, I actively
-                  build scalable applications using modern technologies and industry practices.
+                  Pursuing my degree with rigorous foundation in{" "}
+                  <span className="highlight">software engineering, algorithms, and scalable system design</span>.
+                  Relevant Coursework includes{" "}
+                  <span className="highlight">Data Structures & Algorithms, Operating Systems, DBMS, Cryptography & Network Security, Computer Networks, and IoT Architecture</span>.
                 </p>
 
                 <p>
-                  My academic journey is not limited to theory — I consistently apply my learning
-                  through <span className="highlight">projects, hackathons, and technical leadership</span>.
-                  This hands-on approach has helped me develop strong problem-solving skills and
-                  a deep understanding of how real-world systems are designed and optimized.
+                  Complementing academic coursework with continuous practical application through{" "}
+                  <span className="highlight">research internships, open-source projects, and national hackathons</span>,
+                  maintaining an exemplary academic record while leading technical and coding initiatives.
                 </p>
 
                 <div className="timeline-badges">
-                  <span className="badge">CGPA: 8.21</span>
-                  <span className="badge">SIH 2025 Winner (College Level)</span>
-                  <span className="badge">TechFest Web Wizard Winner</span>
+                  <span className="badge">CGPA: 8.24</span>
+                  <span className="badge">1st Rank — ISTE Coding Contest 2026</span>
+                  <span className="badge">SIH 2025 Winner (Internal)</span>
+                  <span className="badge">SIH 2024 National Finalist</span>
                 </div>
               </div>
             </motion.div>
@@ -1186,11 +1194,12 @@ const Home = () => {
                   <div className="card-icon">
                     <FaCode />
                   </div>
-                  <h3>Web Development</h3>
-                  <p>MERN Stack, Node.js, JavaScript, HTML/CSS</p>
+                  <h3>Full-Stack Development</h3>
+                  <p>Next.js, React.js, Node.js, Express, TypeScript, REST APIs</p>
                   <div className="tech-stack">
+                    <span>Next.js</span>
                     <span>React</span>
-                    <span>Express</span>
+                    <span>PostgreSQL</span>
                     <span>MongoDB</span>
                   </div>
                 </div>
@@ -1206,14 +1215,15 @@ const Home = () => {
                 <div className="card-glow"></div>
                 <div className="card-content">
                   <div className="card-icon">
-                    <FaMicrochip />
+                    <FaBrain />
                   </div>
-                  <h3>Embedded Systems</h3>
-                  <p>IoT, Microcontrollers, Hardware Programming</p>
+                  <h3>Generative AI & ML</h3>
+                  <p>LLM Integrations, LangChain, OpenAI API, Scikit-learn, XGBoost</p>
                   <div className="tech-stack">
-                    <span>Arduino</span>
-                    <span>ESP32</span>
-                    <span>Raspberry Pi</span>
+                    <span>LangChain</span>
+                    <span>OpenAI API</span>
+                    <span>Scikit-Learn</span>
+                    <span>XGBoost</span>
                   </div>
                 </div>
               </motion.div>
@@ -1228,14 +1238,38 @@ const Home = () => {
                 <div className="card-glow"></div>
                 <div className="card-content">
                   <div className="card-icon">
-                    <FaShieldAlt />
+                    <FaTools />
                   </div>
-                  <h3>Cybersecurity</h3>
-                  <p>Ethical Hacking, Vulnerability Analysis</p>
+                  <h3>Cloud & DevOps</h3>
+                  <p>Docker, AWS (EC2, S3), CI/CD, Git, Linux, Postman</p>
                   <div className="tech-stack">
-                    <span>Pen Testing</span>
-                    <span>Networking</span>
-                    <span>Security</span>
+                    <span>Docker</span>
+                    <span>AWS</span>
+                    <span>CI/CD</span>
+                    <span>Linux</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.03, y: -5 }}
+                className="category-card"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+              >
+                <div className="card-glow"></div>
+                <div className="card-content">
+                  <div className="card-icon">
+                    <FaMicrochip />
+                  </div>
+                  <h3>Embedded & IoT</h3>
+                  <p>Arduino, ESP32, IoT Architecture, Real-time Sensor Logic</p>
+                  <div className="tech-stack">
+                    <span>Arduino</span>
+                    <span>ESP32</span>
+                    <span>Sensors</span>
+                    <span>IoT</span>
                   </div>
                 </div>
               </motion.div>
@@ -1274,29 +1308,23 @@ const Home = () => {
               whileHover={{ y: -5 }}
             >
               <div className="timeline-icon">
-                <FaBriefcase />
+                <FaBrain />
               </div>
               <div className="timeline-content">
-                <span className="date">Mar 2026 – Present</span>
-                <h3>IoT Intern</h3>
-                <h4>Uniconverge Technology (IoT Academy, Upskill Campus)</h4>
+                <span className="date">Jun – Jul 2026</span>
+                <h3>Machine Learning Intern</h3>
+                <h4>National Institute of Advanced Manufacturing Technology (NIAMT), Ranchi</h4>
 
                 <ul className="responsibilities">
                   <li>
-                    Designed and built real-world sensor-based systems using Arduino,
-                    including temperature, soil moisture, and ultrasonic modules.
+                    Developed an end-to-end Heart Disease Detection system using Python, Pandas,
+                    Scikit-learn, and XGBoost by benchmarking multiple machine learning algorithms.
                   </li>
                   <li>
-                    Developed automation projects such as smart traffic control and
-                    automatic street lighting systems using embedded logic.
+                    Performed comprehensive data preprocessing, feature engineering, and hyperparameter tuning.
                   </li>
                   <li>
-                    Prototyped IoT communication workflows using ESP8266, LoRaWAN, and
-                    5G concepts for real-time data transmission.
-                  </li>
-                  <li>
-                    Implemented basic embedded security systems using motion and proximity
-                    detection techniques.
+                    Evaluated models using Accuracy, Precision, Recall, and F1-score to maximize diagnostic reliability and prediction performance.
                   </li>
                 </ul>
               </div>
@@ -1308,7 +1336,7 @@ const Home = () => {
                 opacity: experienceInView ? 1 : 0,
                 y: experienceInView ? 0 : 50,
               }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="timeline-item"
               whileHover={{ y: -5 }}
             >
@@ -1316,26 +1344,19 @@ const Home = () => {
                 <FaBriefcase />
               </div>
               <div className="timeline-content">
-                <span className="date">Jun – Sep 2025</span>
-                <h3>Full Stack Developer Intern</h3>
-                <h4>Evergarden Technologies Pvt. Ltd.</h4>
+                <span className="date">June 2025 – Present</span>
+                <h3>Coding & Technical Club Lead</h3>
+                <h4>Government Engineering College Vaishali</h4>
 
                 <ul className="responsibilities">
                   <li>
-                    Developed scalable backend services and REST APIs using Node.js, Hono.js,
-                    and PostgreSQL with clean architecture practices.
+                    Led weekly coding sessions and algorithmic contests for 50+ students, mentoring peers in competitive programming and DSA.
                   </li>
                   <li>
-                    Built responsive and user-friendly UI components integrated with optimized
-                    backend workflows.
+                    Conducted workshops on modern Full-Stack development (React, Node.js, Next.js, and REST APIs).
                   </li>
                   <li>
-                    Worked with modern tools like Redis and Bun to improve performance and
-                    system efficiency.
-                  </li>
-                  <li>
-                    Collaborated with cross-functional teams to deliver production-ready
-                    features following structured development and version control practices.
+                    Directed hands-on Arduino/ESP32 training workshops, guiding students to build real-world embedded and IoT projects.
                   </li>
                 </ul>
               </div>
@@ -1352,28 +1373,22 @@ const Home = () => {
               whileHover={{ y: -5 }}
             >
               <div className="timeline-icon">
-                <FaBriefcase />
+                <FaLaptopCode />
               </div>
               <div className="timeline-content">
-                <span className="date">2025</span>
-                <h3>Freelance Full Stack Developer</h3>
-                <h4>KhetiGrow — Agri-Tech Platform (Live Project)</h4>
+                <span className="date">2025 – Present</span>
+                <h3>Freelance Full-Stack Developer</h3>
+                <h4>Production Platforms: Riwaz Events, KhetiGrow & Quantevo</h4>
 
                 <ul className="responsibilities">
                   <li>
-                    Built a full-stack agri-tech platform using MERN stack with role-based
-                    access for farmers, experts, and service providers.
+                    Engineered <strong>Riwaz Events</strong>, a full-stack event marketplace using Next.js, Node.js, Express, and PostgreSQL with Razorpay 20% token payments.
                   </li>
                   <li>
-                    Implemented features like crop management, expert consultation,
-                    equipment rental, and real-time user interaction.
+                    Built <strong>KhetiGrow</strong>, an agri-tech platform for crop management, expert consultation, and equipment rental with cloud CI/CD deployment.
                   </li>
                   <li>
-                    Designed scalable backend architecture and deployed using CI/CD
-                    pipelines on cloud infrastructure.
-                  </li>
-                  <li>
-                    Focused on performance optimization, clean UI/UX, and real-world usability.
+                    Developed <strong>Quantevo</strong>, a secure online test platform with JWT authentication, real-time timer, auto-evaluation, and anti-cheating enforcement.
                   </li>
                 </ul>
               </div>
@@ -1385,57 +1400,27 @@ const Home = () => {
                 opacity: experienceInView ? 1 : 0,
                 y: experienceInView ? 0 : 50,
               }}
-              transition={{ duration: 0.8, delay: 0.7 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="timeline-item"
               whileHover={{ y: -5 }}
             >
               <div className="timeline-icon">
-                <FaBriefcase />
+                <FaMicrochip />
               </div>
               <div className="timeline-content">
-                <span className="date">2025 - Present</span>
-                <h3>Coding Club Lead</h3>
-                <h4>Government Engineering College Vaishali</h4>
-                <ul className="responsibilities">
-                  <li>
-                    Organized and led 10+ technical workshops on full-stack development and cybersecurity.
-                  </li>
-                  <li>
-                    Mentored 50+ students in DSA, development, and real-world project building.
-                  </li>
-                  <li>
-                    Managed and executed hackathons and coding events with 100+ participants.
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
+                <span className="date">Mar 2026 – Present</span>
+                <h3>IoT Intern</h3>
+                <h4>Uniconverge Technology (IoT Academy, Upskill Campus)</h4>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{
-                opacity: experienceInView ? 1 : 0,
-                y: experienceInView ? 0 : 50,
-              }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="timeline-item"
-              whileHover={{ y: -5 }}
-            >
-              <div className="timeline-icon">
-                <FaBriefcase />
-              </div>
-              <div className="timeline-content">
-                <span className="date">2025 - Present</span>
-                <h3>Technical Club Lead</h3>
-                <h4>Government Engineering College Vaishali</h4>
                 <ul className="responsibilities">
                   <li>
-                    Conducted hands-on sessions on Arduino, IoT systems, and embedded programming.
+                    Designed and built real-world sensor-based systems using Arduino, including temperature, soil moisture, and ultrasonic modules.
                   </li>
                   <li>
-                    Guided students in building real-world IoT prototypes and mini projects.
+                    Developed automation projects such as smart traffic control and automatic street lighting systems using embedded logic.
                   </li>
                   <li>
-                    Organized technical competitions and innovation-driven events.
+                    Prototyped IoT communication workflows using ESP8266 and LoRaWAN concepts for real-time data transmission.
                   </li>
                 </ul>
               </div>

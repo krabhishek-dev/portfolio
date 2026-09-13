@@ -14,7 +14,10 @@ import fuzzer from '/images/Fuzzer.webp';
 import alumni from '/images/alumni.jpeg';
 import AirbnbClone from '/images/AirbnbClone.webp';
 import robotCar from '/images/robotCar.jpg';
-import khetigrow from '/images/khetigrow.png'
+import khetigrow from '/images/khetigrow.png';
+import riwazImage from '/images/riwaz_events.jpg';
+import quantevoImage from '/images/quantevo.jpg';
+import codingImage from '/images/coding.webp';
 
 const Projects = () => {
   const [ref, inView] = useInView({ threshold: 0.1 });
@@ -23,55 +26,92 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
-      title: 'Pragyan Rover Model (Chandrayaan 3 Simulation)',
-      description: 'Remote-controlled rover simulating ISRO’s Pragyan rover operations.',
-      image: pragyanImage ,
-      tags: ['Embedded Systems', 'IoT', 'Arduino'],
-      category: 'Embedded Systems',
-      link: '/projects/1',
-      // featured: true
+      id: 10,
+      title: 'Riwaz Events — Event Marketplace Platform',
+      description: 'Full-stack event marketplace platform to discover and book venues, catering, photography, and event services with Razorpay advance payments.',
+      image: riwazImage,
+      tags: ['Next.js', 'PostgreSQL', 'Express.js', 'Razorpay', 'Full-Stack'],
+      category: 'Web Development',
+      link: '/projects/10',
+      featured: true,
     },
     {
-      id: 2,
-      title: 'Mars Rover Model',
-      description: 'Joystick-controlled rover using dual ESP32 with live video feed and display support.',
-      image: marsImage,
-      tags: ['ESP32', 'IoT', 'Real-time'],
-      category: 'Embedded Systems',
-      link: '/projects/2',
-      featured: true
-
+      id: 9,
+      title: 'KhetiGrow — Agri-Tech Platform',
+      description: 'Full-stack agricultural platform for crop management, expert consultation, and equipment rental with role-based access control and cloud CI/CD.',
+      image: khetigrow,
+      tags: ['React', 'Node.js', 'MongoDB', 'CI/CD', 'Cloud'],
+      category: 'Web Development',
+      link: '/projects/9',
+      featured: true,
+    },
+    {
+      id: 11,
+      title: 'Quantevo — Smart Test Portal',
+      description: 'Secure online testing platform featuring JWT authentication, real-time timer, auto-evaluation, and anti-cheating mechanisms.',
+      image: quantevoImage,
+      tags: ['MERN Stack', 'JWT', 'Security', 'Anti-Cheating', 'Real-time'],
+      category: 'Web Development',
+      link: '/projects/11',
+      featured: true,
+    },
+    {
+      id: 12,
+      title: 'Heart Disease Detection System (ML)',
+      description: 'End-to-end predictive healthcare ML system built at NIAMT Ranchi, comparing algorithms with Scikit-learn and XGBoost for optimal precision & recall.',
+      image: codingImage,
+      tags: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas', 'Machine Learning'],
+      category: 'AI/ML',
+      link: '/projects/12',
+      featured: true,
     },
     {
       id: 3,
       title: 'GEMINI-AI Jarvis',
-      description: 'AI-powered personal assistant with Google Gemini and OpenAI integration.',
+      description: 'AI-powered personal assistant with Google Gemini and OpenAI integration for intelligent system commands and automation.',
       image: jarvis,
-      tags: ['AI', 'NLP', 'Automation'],
+      tags: ['AI', 'NLP', 'Gemini API', 'OpenAI'],
       category: 'AI/ML',
       link: '/projects/3',
-      featured: true
+      featured: true,
+    },
+    {
+      id: 8,
+      title: 'Advanced Alumni Portal (SIH Finalist)',
+      description: 'Interactive alumni directory with geolocation mapping and dynamic filters. National Finalist in Smart India Hackathon 2024.',
+      image: alumni,
+      tags: ['React', 'Node.js', 'MongoDB', 'SIH 2024'],
+      category: 'Web Development',
+      link: '/projects/8',
+      featured: true,
+    },
+    {
+      id: 1,
+      title: 'Pragyan Rover Model (Chandrayaan 3 Simulation)',
+      description: 'Remote-controlled rover simulating ISRO’s Pragyan rover operations with autonomous navigation. Recognized by ISRO scientists.',
+      image: pragyanImage,
+      tags: ['Embedded Systems', 'IoT', 'Arduino'],
+      category: 'Embedded Systems',
+      link: '/projects/1',
+    },
+    {
+      id: 2,
+      title: 'Mars Rover Model (Patna Planetarium Exhibit)',
+      description: 'Joystick-controlled rover using dual ESP32 with live video feed and display support, publicly showcased at Patna Planetarium.',
+      image: marsImage,
+      tags: ['ESP32', 'IoT', 'Real-time'],
+      category: 'Embedded Systems',
+      link: '/projects/2',
+      featured: true,
     },
     {
       id: 4,
       title: 'Web Application Fuzzer',
-      description: 'Security tool to identify vulnerabilities in web applications.',
+      description: 'Security tool to identify vulnerabilities such as SQLi, XSS, and broken access controls in web applications.',
       image: fuzzer,
       tags: ['Cybersecurity', 'Python', 'Security'],
       category: 'Cybersecurity',
-      link: '/projects/4'
-    },
-    {
-      id: 5,
-      title: 'Faculty Leave Management',
-      description: 'Full-stack application with role-based authentication.',
-      image: leave,
-      tags: ['Node.Js', 'MongoDB', 'Full-stack'],
-      category: 'Web Development',
-      link: '/projects/5',
-      featured: true
-
+      link: '/projects/4',
     },
     {
       id: 6,
@@ -80,40 +120,17 @@ const Projects = () => {
       image: AirbnbClone,
       tags: ['Node.Js', 'MongoDB', 'Full-stack'],
       category: 'Web Development',
-      link: '/projects/6'
+      link: '/projects/6',
     },
     {
       id: 7,
       title: 'Multipurpose Robot Car',
-      description: 'Robot car with voice/manual/obstacle/human-following modes and real-world applications.',
+      description: 'Robot car with voice/manual/obstacle/human-following modes and real-world embedded applications.',
       image: robotCar,
       tags: ['Arduino', 'Sensors', 'Robotics'],
       category: 'Embedded Systems',
-      link: '/projects/7'
+      link: '/projects/7',
     },
-    {
-      id: 8,
-      title: 'Advanced Alumni Portal(ProtoType)',
-      description: 'Interactive alumni directory with geolocation mapping and dynamic filters.',
-      image: alumni,
-      tags: ['React', 'Node.js', 'MongoDB'],
-      category: 'Web Development',
-      link: '/projects/8',
-      featured: true
-
-    },
-    {
-      id: 9,
-      title: 'KhetiGrow — Agri-Tech Platform',
-    description:
-      'Full-stack MERN platform for farmers with crop management, expert consultation, equipment rental, and role-based dashboards.',
-    image: khetigrow,
-    tags: ['React', 'Node.js', 'MongoDB', 'CI/CD', 'Cloud'],
-    category: 'Web Development',
-    link: '/projects/khetigrow',
-    featured: true,
-
-    }
   ];
 
   const filters = ['All', 'Web Development', 'AI/ML', 'Embedded Systems', 'Cybersecurity'];
