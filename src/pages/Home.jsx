@@ -61,20 +61,29 @@ import "bootstrap/dist/css/bootstrap.css";
 import MouseEffect from "../components/MouseEffect";
 import AchievementsCarousel from "../components/AchievementsCarousel";
 
-// Particle background component
+// Dark-theme glowing particle background
 const ParticlesBackground = () => {
   const [particles, setParticles] = useState([]);
 
+  // Dark theme color palette: purple, cyan, pink, blue-violet
+  const darkPalette = [
+    'rgba(108, 99, 255, 0.8)',   // purple
+    'rgba(0, 212, 255, 0.7)',    // cyan
+    'rgba(255, 107, 157, 0.6)',  // pink
+    'rgba(77, 68, 219, 0.7)',    // deep purple
+    'rgba(0, 180, 220, 0.5)',    // light cyan
+  ];
+
   useEffect(() => {
-    const newParticles = Array.from({ length: 40 }).map((_, i) => ({
+    const newParticles = Array.from({ length: 35 }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: Math.random() * 12 + 2,
-      delay: Math.random() * 5,
-      duration: Math.random() * 15 + 10,
-      color: `hsl(${Math.random() * 60 + 200}, 80%, 60%)`,
-      shape: Math.random() > 0.5 ? "circle" : "square",
+      size: Math.random() * 5 + 2,
+      delay: Math.random() * 6,
+      duration: Math.random() * 18 + 12,
+      color: darkPalette[Math.floor(Math.random() * darkPalette.length)],
+      shape: Math.random() > 0.7 ? "square" : "circle",
     }));
     setParticles(newParticles);
   }, []);
@@ -87,9 +96,9 @@ const ParticlesBackground = () => {
           className={`particle ${particle.shape}`}
           initial={{ opacity: 0 }}
           animate={{
-            opacity: [0, 0.8, 0],
-            y: [particle.y, particle.y + 100],
-            x: [particle.x, particle.x + (Math.random() * 30 - 15)],
+            opacity: [0, 0.9, 0],
+            y: [`${particle.y}%`, `${particle.y - 25}%`],
+            x: [`${particle.x}%`, `${particle.x + (Math.random() * 6 - 3)}%`],
             rotate: particle.shape === "square" ? [0, 180] : 0,
           }}
           transition={{
@@ -100,18 +109,25 @@ const ParticlesBackground = () => {
             ease: "linear",
           }}
           style={{
+            position: 'absolute',
             left: `${particle.x}%`,
             top: `${particle.y}%`,
             width: `${particle.size}px`,
             height: `${particle.size}px`,
             background: particle.color,
-            boxShadow: `0 0 20px 2px ${particle.color}`,
+            borderRadius: particle.shape === 'circle' ? '50%' : '2px',
+            boxShadow: `0 0 ${particle.size * 3}px ${particle.size}px ${particle.color}`,
           }}
         />
       ))}
     </div>
   );
 };
+
+// Animated grid background for hero
+const GridBackground = () => (
+  <div className="grid-background" aria-hidden="true" />
+);
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("skills");
@@ -374,14 +390,14 @@ const Home = () => {
       link: "https://www.linkedin.com/in/abhishek-kumar977/",
       color: "#0077b5",
     },
-    // { icon: <SiLeetcode />, name: "LeetCode", link: "#", color: "#f89f1b" },
+    { icon: <SiLeetcode />, name: "LeetCode", link: "https://leetcode.com/u/krabhishek-dev/", color: "#f89f1b" },
     {
       icon: <SiHackerrank />,
       name: "HackerRank",
       link: "https://www.hackerrank.com/profile/abhibth977",
       color: "#2ec866",
     },
-    { icon: <FaTwitter />, name: "Twitter", link: "https://x.com/itsabhishek_01", color: "#1da1f2" },
+    // { icon: <FaTwitter />, name: "Twitter", link: "https://x.com/itsabhishek_01", color: "#1da1f2" },
     {
       icon: <FiMail />,
       name: "Email",
@@ -495,7 +511,7 @@ const Home = () => {
       src: "/portfolio/images/tt-prize.jpg",
       alt: "Table Tennis Prize",
     },
-    
+
 
     {
       src: "/portfolio/images/RoboWinner.jpeg",
@@ -575,6 +591,7 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="hero" ref={heroRef}>
+        <GridBackground />
         <ParticlesBackground />
         <div className="container">
           {/* <MouseEffect /> */}
@@ -863,6 +880,8 @@ const Home = () => {
       </section>
 
       <section className="skills" id="skills" ref={ref}>
+        {/* Perspective grid background */}
+        <div className="perspective-grid-wrapper" aria-hidden="true" />
         {/* Animated background particles */}
         <div className="particles-container">
           <Particles

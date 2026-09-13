@@ -1,11 +1,15 @@
-/* Project Details Specific Styles */
+/* ============================================================
+   PROJECTSDETAILS.CSS — Dark Theme | Abhishek Kumar Portfolio
+   ============================================================ */
+
 .project-details-container {
   position: relative;
-  color: var(--text-color);
-  background: var(--light-color);
+  background: #050510;
+  color: #e8e8f5;
+  min-height: 100vh;
 }
 
-/* Hero Section */
+/* ── Hero ── */
 .project-details-hero {
   height: 70vh;
   min-height: 500px;
@@ -16,16 +20,32 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .project-details-hero::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 16, 0.98) 0%,
+    rgba(5, 5, 16, 0.6) 50%,
+    rgba(5, 5, 16, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+/* Grid overlay on hero */
+.project-details-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(108, 99, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108, 99, 255, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  z-index: 0;
 }
 
 .project-details-hero-content {
@@ -40,92 +60,144 @@
 .project-details-back-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
+  gap: 8px;
+  background: rgba(15, 15, 35, 0.8);
+  backdrop-filter: blur(10px);
+  color: #e8e8f5;
+  padding: 10px 20px;
+  border: 1px solid rgba(108, 99, 255, 0.25);
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 0.92rem;
+  font-family: 'Outfit', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .project-details-back-button:hover {
-  background: var(--primary-color);
+  background: #6c63ff;
+  border-color: #6c63ff;
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
 }
 
-.project-details-header {
-  color: white;
-  max-width: 800px;
-}
+.project-details-header { color: #e8e8f5; max-width: 800px; }
 
 .project-details-category {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
-  background: rgba(108, 99, 255, 0.2);
-  padding: 0.5rem 1.2rem;
+  gap: 10px;
+  background: rgba(108, 99, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  padding: 6px 16px;
   border-radius: 50px;
-  margin-bottom: 1.5rem;
-  backdrop-filter: blur(5px);
+  margin-bottom: 18px;
+  color: #00d4ff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
 }
 
 .project-category-icon {
-  font-size: 1.2rem;
-  color: var(--primary-color);
+  font-size: 1.1rem;
+  color: #6c63ff;
 }
 
 .project-details-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  color: #e8e8f5;
 }
 
 .project-details-header p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  opacity: 0.9;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #9090b8;
   margin-bottom: 2rem;
+  line-height: 1.7;
 }
 
 .project-details-links {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
 }
 
 .project-details-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.8rem 1.5rem;
+  gap: 8px;
+  padding: 10px 22px;
   border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
   font-weight: 600;
+  font-size: 0.92rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .project-details-links a:first-child {
-  background: var(--primary-color);
+  background: linear-gradient(135deg, #6c63ff, #4d44db);
+  color: white;
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
+}
+
+.project-details-links a:first-child:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(108, 99, 255, 0.6);
   color: white;
 }
 
 .project-details-live-link {
-  background: transparent;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(15, 15, 35, 0.8) !important;
+  color: #e8e8f5 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
 }
 
 .project-details-live-link:hover {
-  border-color: white;
-  background: rgba(255, 255, 255, 0.1);
+  border-color: #00d4ff !important;
+  color: #00d4ff !important;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
 }
 
-/* Main Content */
+/* Disabled link buttons */
+.github-disabled-link,
+.live-disabled-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: not-allowed;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 15, 35, 0.5);
+  color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.github-disabled-link:hover,
+.live-disabled-link:hover {
+  background: rgba(15, 15, 35, 0.7);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.project-details-links button {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+}
+
+/* ── Main Content ── */
 .project-details-content {
-  padding: 4rem 0;
+  padding: 5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -134,44 +206,69 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .project-details-description h2,
 .project-details-features h2,
 .project-details-gallery h2 {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--dark-color);
+  color: #e8e8f5;
+  letter-spacing: -0.03em;
+  position: relative;
+  display: inline-block;
+}
+
+.project-details-description h2::after,
+.project-details-features h2::after,
+.project-details-gallery h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; left: 0;
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, #6c63ff, #00d4ff);
+  border-radius: 2px;
 }
 
 .project-details-description p {
-  line-height: 1.8;
-  color: var(--gray-color);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.85;
+  color: #9090b8;
   margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
-.project-details-meta {
-  position: sticky;
-  top: 2rem;
-}
+/* ── Meta Card ── */
+.project-details-meta { position: sticky; top: 100px; }
 
 .project-details-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  background: rgba(15, 15, 35, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease;
+}
+
+.project-details-card:hover {
+  border-color: rgba(108, 99, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(108, 99, 255, 0.12);
 }
 
 .project-details-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #e8e8f5;
 }
 
 .project-details-item {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(108, 99, 255, 0.1);
 }
 
 .project-details-item:last-child {
@@ -181,106 +278,133 @@
 }
 
 .project-details-item span {
+  font-family: 'Outfit', sans-serif;
   font-weight: 600;
-  color: var(--dark-color);
+  color: #9090b8;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .project-details-tags,
 .project-details-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .project-details-tags span,
 .project-details-tech span {
-  background: rgba(108, 99, 255, 0.1);
-  color: var(--primary-color);
-  padding: 0.3rem 0.8rem;
-  border-radius: 50px;
-  font-size: 0.8rem;
+  background: rgba(108, 99, 255, 0.12);
+  color: #6c63ff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .project-details-tech span {
-  background: rgba(0, 0, 0, 0.05);
-  color: var(--dark-color);
+  background: rgba(0, 212, 255, 0.08);
+  color: #00d4ff;
+  border-color: rgba(0, 212, 255, 0.15);
 }
 
-/* Features Section */
+/* ── Features Section ── */
 .project-features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 5rem;
 }
 
 .project-feature-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  background: rgba(15, 15, 35, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(108, 99, 255, 0.18);
+  padding: 24px;
+  border-radius: 16px;
+  transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
 }
 
 .project-feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: rgba(108, 99, 255, 0.4);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(108, 99, 255, 0.12);
 }
 
 .project-feature-number {
-  width: 40px;
-  height: 40px;
-  background: rgba(108, 99, 255, 0.1);
-  color: var(--primary-color);
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.2), rgba(0, 212, 255, 0.15));
+  color: #6c63ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
+  border: 1px solid rgba(108, 99, 255, 0.3);
 }
 
 .project-feature-card h3 {
-  font-size: 1.1rem;
-  color: var(--dark-color);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.05rem;
+  color: #e8e8f5;
+  margin-bottom: 8px;
 }
 
-/* Gallery Section */
+.project-feature-card p {
+  color: #9090b8;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* ── Gallery Section ── */
 .project-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .project-gallery-item {
-  border-radius: 1rem;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  transition: all 0.4s ease;
+}
+
+.project-gallery-item:hover {
+  border-color: rgba(108, 99, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.2);
 }
 
 .project-gallery-item img {
   width: 100%;
-  height: 250px;
+  height: 240px;
   object-fit: cover;
   transition: transform 0.5s ease;
+  filter: brightness(0.9);
 }
 
 .project-gallery-item:hover img {
   transform: scale(1.05);
+  filter: brightness(1);
 }
 
-/* Back to Top Button */
+/* ── Back to Top ── */
 .project-details-back-to-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 50px;
-  height: 50px;
-  background: var(--primary-color);
+  bottom: 2rem; right: 2rem;
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, #6c63ff, #4d44db);
   color: white;
   border: none;
   border-radius: 50%;
@@ -289,7 +413,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 5px 20px rgba(108, 99, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
   z-index: 99;
   opacity: 0;
   visibility: hidden;
@@ -301,75 +425,29 @@
   visibility: visible;
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .project-details-overview {
-    grid-template-columns: 1fr;
-  }
+.project-details-back-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(108, 99, 255, 0.6);
+}
 
-  .project-details-meta {
-    position: static;
-    margin-top: 3rem;
-  }
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .project-details-overview { grid-template-columns: 1fr; }
+  .project-details-meta { position: static; margin-top: 3rem; }
 }
 
 @media (max-width: 768px) {
-  .project-details-hero {
-    height: 60vh;
-    min-height: 400px;
-    padding-bottom: 3rem;
-  }
-
-  .project-details-links {
-    flex-direction: column;
-  }
+  .project-details-hero { height: 55vh; min-height: 380px; padding-bottom: 3rem; }
+  .project-details-links { flex-direction: column; align-items: flex-start; }
+  .project-details-content { padding: 3rem 1.5rem; }
 }
 
 @media (max-width: 576px) {
-  .project-details-hero {
-    height: 50vh;
-  }
-
-  .project-details-content {
-    padding: 2rem 1rem;
-  }
-
+  .project-details-hero { height: 45vh; }
+  .project-details-content { padding: 2rem 1rem; }
   .project-details-description h2,
   .project-details-features h2,
-  .project-details-gallery h2 {
-    font-size: 1.5rem;
-  }
-
-  .project-gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Add to your projects.css */
-.github-disabled-link,
-.live-disabled-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(5px);
-  transition: all 0.3s ease;
-}
-
-.github-disabled-link:hover,
-.live-disabled-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-/* Make it consistent with your existing link styles */
-.project-details-links button {
-  font-size: 1rem;
-  font-family: inherit;
+  .project-details-gallery h2 { font-size: 1.5rem; }
+  .project-gallery-grid { grid-template-columns: 1fr; }
+  .project-features-grid { grid-template-columns: 1fr; }
 }

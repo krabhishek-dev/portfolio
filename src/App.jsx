@@ -7,7 +7,9 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import './assets/styles/global.css';
+import './App.css';
 import Loader from './components/Loader';
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

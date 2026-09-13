@@ -1,0 +1,19 @@
+/* index.css - Global dark base override */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #050510;
+  color: #e8e8f5;
+}
+
+/* Bootstrap dark mode overrides */
+.container, .container-fluid {
+  background: transparent !important;
+}
+
+/* Remove Bootstrap's white backgrounds */
+.row, .col, [class*="col-"] {
+  background: transparent !important;
+}

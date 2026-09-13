@@ -1,105 +1,141 @@
-/* Main Carousel Container */
+/* ============================================================
+   CAROUSEL.CSS — Dark Theme | Abhishek Kumar Portfolio
+   ============================================================ */
+
+/* ── Main Carousel Container ── */
 .achievements-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-  }
-  
-  /* Slide Styling */
-  .carousel-slide {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .achievement-image {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-  }
-  
-  /* Caption Styling */
-  .caption {
-    margin-top: 15px;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 8px;
-    color: white;
-  }
-  
-  .caption h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .caption p {
-    font-size: 1rem;
-    opacity: 0.9;
-  }
-  
-  /* Navigation Arrows */
-  .nav-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(108, 99, 255, 0.8);
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    color: white;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-arrow.prev {
-    left: 10px;
-  }
-  
-  .nav-arrow.next {
-    right: 10px;
-  }
-  
-  /* Dots Styling */
-  .slick-dots {
-    bottom: 10px;
-  }
-  
-  .slick-dots li button:before {
-    color: #6c63ff;
-    opacity: 0.5;
-    font-size: 10px;
-  }
-  
-  .slick-dots li.slick-active button:before {
-    color: #6c63ff;
-    opacity: 1;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .achievements-carousel {
-      padding: 10px;
-    }
-    .achievement-image {
-      max-height: 300px;
-    }
-    .nav-arrow {
-      width: 30px;
-      height: 30px;
-    }
-  }
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(15, 15, 35, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(108, 99, 255, 0.08);
+}
+
+/* Glowing top border */
+.achievements-carousel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #6c63ff, #00d4ff, #ff6b9d, #6c63ff);
+  background-size: 200% 100%;
+  animation: gradientSlide 4s linear infinite;
+}
+
+@keyframes gradientSlide {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* ── Slide Styling ── */
+.carousel-slide {
+  padding: 16px;
+  text-align: center;
+}
+
+.achievement-image {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  filter: brightness(0.95);
+}
+
+.achievement-image:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 40px rgba(108, 99, 255, 0.2);
+  filter: brightness(1);
+}
+
+/* ── Caption Styling ── */
+.caption {
+  margin-top: 18px;
+  padding: 18px 22px;
+  background: rgba(5, 5, 16, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(108, 99, 255, 0.15);
+}
+
+.caption h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #e8e8f5;
+  letter-spacing: -0.02em;
+}
+
+.caption p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #9090b8;
+  line-height: 1.65;
+}
+
+/* ── Navigation Arrows ── */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(108, 99, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(108, 99, 255, 0.4);
+  border-radius: 50%;
+  width: 44px; height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-arrow:hover {
+  background: #6c63ff;
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow.prev { left: 12px; }
+.nav-arrow.next { right: 12px; }
+
+/* ── Slick Dots ── */
+.slick-dots { bottom: 12px; }
+
+.slick-dots li button:before {
+  color: rgba(108, 99, 255, 0.5);
+  font-size: 9px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #6c63ff;
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(108, 99, 255, 0.8);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .achievements-carousel { padding: 12px; border-radius: 14px; }
+  .achievement-image { max-height: 300px; }
+  .nav-arrow { width: 34px; height: 34px; font-size: 0.95rem; }
+  .caption h3 { font-size: 1.05rem; }
+}
+
+@media (max-width: 480px) {
+  .achievement-image { max-height: 220px; }
+  .caption { padding: 12px 16px; }
+  .nav-arrow { width: 30px; height: 30px; }
+}

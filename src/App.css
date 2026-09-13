@@ -1,0 +1,27 @@
+/* App.css — Root App dark background */
+.app {
+  min-height: 100vh;
+  background-color: #050510;
+  color: #e8e8f5;
+}
+
+.home-page {
+  background-color: #050510;
+  color: #e8e8f5;
+  min-height: 100vh;
+}
+
+/* Override Bootstrap white backgrounds site-wide */
+* {
+  --bs-body-bg: #050510;
+  --bs-body-color: #e8e8f5;
+}
+
+/* Bootstrap grid container override */
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  background: transparent !important;
+}

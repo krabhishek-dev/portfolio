@@ -1,80 +1,147 @@
+/* ============================================================
+   LOADER.CSS — Dark Theme | Abhishek Kumar Portfolio
+   ============================================================ */
+
 .code-particle-loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    overflow: hidden;
+  position: fixed;
+  inset: 0;
+  background: #050510;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Subtle grid in loader background */
+.code-particle-loader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(108, 99, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108, 99, 255, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  animation: gridScroll 15s linear infinite;
+  z-index: 0;
+}
+
+@keyframes gridScroll {
+  0%   { background-position: 0 0; }
+  100% { background-position: 0 44px; }
+}
+
+/* Ambient glow orbs */
+.code-particle-loader::after {
+  content: '';
+  position: absolute;
+  top: 30%; left: 20%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatOrb 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+.particle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.loader-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Loader name text */
+.loader-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #6c63ff, #00d4ff, #ff6b9d);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientText 3s ease infinite;
+}
+
+@keyframes gradientText {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.loader-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letterFloat 1.5s infinite ease-in-out;
+  animation-delay: var(--delay);
+}
+
+@keyframes letterFloat {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(108, 99, 255, 0.8));
   }
-  
-  .particle-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
+  50% {
+    transform: translateY(-18px);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 24px rgba(0, 212, 255, 0.9));
   }
-  
-  .loader-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-  
-  .loader-text {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #6c63ff;
-    font-family: 'Courier New', monospace;
-  }
-  
-  .loader-letter {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: letterFloat 1.5s infinite ease-in-out;
-    animation-delay: var(--delay);
-  }
-  
-  @keyframes letterFloat {
-    0%, 100% {
-      transform: translateY(0);
-      opacity: 1;
-      text-shadow: 0 0 10px rgba(108, 99, 255, 0.7);
-    }
-    50% {
-      transform: translateY(-20px);
-      opacity: 0.8;
-      text-shadow: 0 0 20px rgba(108, 99, 255, 0.9);
-    }
-  }
-  
-  .progress-track {
-    width: 300px;
-    height: 4px;
-    background: rgba(108, 99, 255, 0.2);
-    border-radius: 2px;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-  
-  .progress-bar {
-    height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, #6c63ff, #a29bfe);
-    border-radius: 2px;
-    animation: progressLoad 2.5s infinite ease-in-out;
-  }
-  
-  @keyframes progressLoad {
-    0% { width: 0; margin-left: 0; }
-    50% { width: 100%; margin-left: 0; }
-    100% { width: 0; margin-left: 100%; }
-  }
+}
+
+/* Progress bar track */
+.progress-track {
+  width: 280px;
+  height: 3px;
+  background: rgba(108, 99, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #6c63ff, #00d4ff, #ff6b9d);
+  border-radius: 4px;
+  animation: progressLoad 2.2s infinite ease-in-out;
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.6);
+}
+
+@keyframes progressLoad {
+  0%   { width: 0; margin-left: 0; }
+  50%  { width: 100%; margin-left: 0; }
+  100% { width: 0; margin-left: 100%; }
+}
+
+/* "Loading..." subtitle */
+.loader-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #55556b;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
