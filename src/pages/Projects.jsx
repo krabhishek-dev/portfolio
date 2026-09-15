@@ -15,8 +15,8 @@ import alumni from '/images/alumni.jpeg';
 import AirbnbClone from '/images/AirbnbClone.webp';
 import robotCar from '/images/robotCar.jpg';
 import khetigrow from '/images/khetigrow.png';
-import riwazImage from '/images/riwaz_events.jpg';
-import quantevoImage from '/images/quantevo.jpg';
+import riwazImage from '/images/riwaz_events.png';
+import quantevoImage from '/images/quantevo.png';
 import codingImage from '/images/coding.webp';
 
 const Projects = () => {

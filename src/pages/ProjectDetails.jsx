@@ -208,7 +208,7 @@ const ProjectDetails = () => {
       image: '/portfolio/images/riwaz_events.jpg',
       tags: ['Next.js', 'PostgreSQL', 'Express.js', 'Razorpay', 'Full-stack'],
       githubLink: '#',
-      liveLink: '#',
+      liveLink: 'https://www.riwazevents.com/',
       features: [
         'Multi-service discovery for venues, catering, photography, and decoration',
         'Advanced filtering by location, price range, capacity, and ratings',
@@ -219,7 +219,7 @@ const ProjectDetails = () => {
       ],
       technologies: ['Next.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Razorpay', 'Tailwind CSS'],
       images: [
-        '/portfolio/images/riwaz_events.jpg',
+        '/portfolio/images/riwaz_events.png',
       ]
     },
     {
@@ -265,7 +265,7 @@ const ProjectDetails = () => {
       image: '/portfolio/images/quantevo.jpg',
       tags: ['MERN Stack', 'JWT', 'Security', 'Anti-Cheating', 'Real-time'],
       githubLink: '#',
-      liveLink: '#',
+      liveLink: 'https://quantevo.onrender.com/',
       features: [
         'Secure JWT authentication for candidate verification',
         'Real-time synchronized countdown exam timer',
@@ -276,7 +276,7 @@ const ProjectDetails = () => {
       ],
       technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'CSS3'],
       images: [
-        '/portfolio/images/quantevo.jpg',
+        '/portfolio/images/quantevo.png',
       ]
     },
     {
@@ -287,7 +287,7 @@ const ProjectDetails = () => {
       longDescription: 'Engineered an end-to-end Heart Disease Detection system using Python, Pandas, Scikit-learn, and XGBoost during research internship at National Institute of Advanced Manufacturing Technology (NIAMT), Ranchi. Compared multiple machine learning algorithms including Logistic Regression, Random Forest, Support Vector Machines, and XGBoost. Performed thorough data preprocessing, outlier removal, feature selection, and hyperparameter tuning to achieve top-tier Precision, Recall, and F1-score.',
       image: '/portfolio/images/coding.webp',
       tags: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas', 'Machine Learning'],
-      githubLink: '#',
+      githubLink: 'https://github.com/krabhishek-dev/Heart-Disease-Prediction-Machine-Learning',
       liveLink: '#',
       features: [
         'Comparative benchmarking across 5+ machine learning algorithms',
