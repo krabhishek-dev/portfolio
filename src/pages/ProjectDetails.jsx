@@ -285,7 +285,7 @@ const ProjectDetails = () => {
       title: 'Heart Disease Detection System (ML)',
       description: 'End-to-end predictive healthcare machine learning model developed at NIAMT Ranchi.',
       longDescription: 'Engineered an end-to-end Heart Disease Detection system using Python, Pandas, Scikit-learn, and XGBoost during research internship at National Institute of Advanced Manufacturing Technology (NIAMT), Ranchi. Compared multiple machine learning algorithms including Logistic Regression, Random Forest, Support Vector Machines, and XGBoost. Performed thorough data preprocessing, outlier removal, feature selection, and hyperparameter tuning to achieve top-tier Precision, Recall, and F1-score.',
-      image: '/portfolio/images/coding.webp',
+      image: '/portfolio/images/heart-disease-prediction-ml.jpg',
       tags: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas', 'Machine Learning'],
       githubLink: 'https://github.com/krabhishek-dev/Heart-Disease-Prediction-Machine-Learning',
       liveLink: '#',
@@ -298,7 +298,7 @@ const ProjectDetails = () => {
       ],
       technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'XGBoost', 'Matplotlib'],
       images: [
-        '/portfolio/images/coding.webp',
+        '/portfolio/images/heart-disease-prediction-ml.jpg',
       ]
     }
   ];

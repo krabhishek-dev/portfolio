@@ -17,7 +17,7 @@ import robotCar from '/images/robotCar.jpg';
 import khetigrow from '/images/khetigrow.png';
 import riwazImage from '/images/riwaz_events.png';
 import quantevoImage from '/images/quantevo.png';
-import codingImage from '/images/coding.webp';
+import heartDisease from '/images/heart-disease-prediction-ml.jpg';
 
 const Projects = () => {
   const [ref, inView] = useInView({ threshold: 0.1 });
@@ -59,7 +59,7 @@ const Projects = () => {
       id: 12,
       title: 'Heart Disease Detection System (ML)',
       description: 'End-to-end predictive healthcare ML system built at NIAMT Ranchi, comparing algorithms with Scikit-learn and XGBoost for optimal precision & recall.',
-      image: codingImage,
+      image: heartDisease,
       tags: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas', 'Machine Learning'],
       category: 'AI/ML',
       link: '/projects/12',
